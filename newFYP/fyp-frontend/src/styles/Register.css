@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Syne:wght@700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ── WRAPPER ── */
+.reg-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(160deg, #c7e8fa 0%, #eaf6ff 35%, #d4f5ef 70%, #eafaf8 100%);
+    position: relative;
+    overflow: hidden;
+    padding: 2rem;
+}
+
+/* BG Shapes */
+.reg-shapes {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.rs {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.rs-1 {
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(14, 165, 233, 0.25) 0%, transparent 70%);
+    top: -130px;
+    right: -110px;
+}
+
+.rs-2 {
+    width: 380px;
+    height: 380px;
+    background: radial-gradient(circle, rgba(13, 148, 136, 0.2) 0%, transparent 70%);
+    bottom: -100px;
+    left: -90px;
+}
+
+.rs-3 {
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(14, 165, 233, 0.15) 0%, transparent 70%);
+    top: 40%;
+    left: 8%;
+}
+
+.rs-4 {
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, transparent 70%);
+    bottom: 20%;
+    right: 6%;
+}
+
+/* ── SPLIT BOX ── */
+.reg-box {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    max-width: 900px;
+    min-height: 580px;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 24px 70px rgba(14, 165, 233, 0.18);
+}
+
+/* ── LEFT PANEL ── */
+.reg-left {
+    width: 38%;
+    background: linear-gradient(160deg, #0ea5e9 0%, #0d9488 100%);
+    padding: 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.reg-left::before {
+    content: '';
+    position: absolute;
+    top: -80px;
+    right: -80px;
+    width: 250px;
+    height: 250px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+}
+
+.reg-left::after {
+    content: '';
+    position: absolute;
+    bottom: -60px;
+    left: -60px;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 50%;
+}
+
+.reg-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Syne', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.reg-logo-icon {
+    width: 34px;
+    height: 34px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+.reg-ai {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.reg-left h2 {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 0.8rem;
+    position: relative;
+    z-index: 1;
+    line-height: 1.2;
+}
+
+.reg-left > p {
+    font-size: 0.83rem;
+    color: rgba(255, 255, 255, 0.82);
+    line-height: 1.65;
+    margin-bottom: 1.8rem;
+    position: relative;
+    z-index: 1;
+}
+
+.reg-info-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    flex: 1;
+    position: relative;
+    z-index: 1;
+}
+
+.reg-info-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 12px;
+    padding: 0.75rem 0.9rem;
+}
+
+.reg-info-card span {
+    font-size: 1.1rem;
+}
+
+.reg-info-card strong {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 2px;
+}
+
+.reg-info-card p {
+    font-size: 0.72rem;
+    color: rgba(255, 255, 255, 0.72);
+    margin: 0;
+}
+
+.reg-back {
+    margin-top: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.reg-back span {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.82rem;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.reg-back span:hover {
+    color: white;
+}
+
+/* ── RIGHT PANEL ── */
+.reg-right {
+    flex: 1;
+    background: white;
+    padding: 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow-y: auto;
+}
+
+.reg-form-header {
+    margin-bottom: 1.5rem;
+}
+
+.reg-form-header h3 {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.7rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 0.3rem;
+}
+
+.reg-form-header p {
+    color: #64748b;
+    font-size: 0.87rem;
+}
+
+/* Fields */
+.reg-field {
+    margin-bottom: 1rem;
+}
+
+.reg-field label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.82rem;
+    color: #374151;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+}
+
+.reg-field input,
+.reg-field select {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background: #f8fafc;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 10px;
+    color: #0f172a;
+    font-size: 0.88rem;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.3s;
+    outline: none;
+}
+
+.reg-field input::placeholder {
+    color: #94a3b8;
+}
+
+.reg-field input:focus,
+.reg-field select:focus {
+    border-color: #0ea5e9;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1);
+}
+
+.reg-field select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='%2394a3b8'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+}
+
+.reg-field select option {
+    background: white;
+    color: #0f172a;
+}
+
+/* Two column row */
+.reg-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+}
+
+/* PMDC Badge — Doctor Only tag */
+.reg-pmdc-badge {
+    font-size: 0.68rem;
+    font-weight: 600;
+    color: #0ea5e9;
+    background: rgba(14, 165, 233, 0.1);
+    border: 1px solid rgba(14, 165, 233, 0.25);
+    border-radius: 20px;
+    padding: 2px 8px;
+    letter-spacing: 0.02em;
+}
+
+/* Button */
+.reg-btn {
+    width: 100%;
+    padding: 0.85rem;
+    background: linear-gradient(135deg, #0ea5e9, #0d9488);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 0.92rem;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    transition: all 0.3s;
+}
+
+.reg-btn:hover {
+    opacity: 0.92;
+    transform: translateY(-1px);
+    box-shadow: 0 8px 25px rgba(14, 165, 233, 0.35);
+}
+
+/* Login Link */
+.reg-login {
+    text-align: center;
+    color: #64748b;
+    font-size: 0.85rem;
+    margin-top: 1.2rem;
+}
+
+.reg-login span {
+    color: #0ea5e9;
+    cursor: pointer;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.reg-login span:hover {
+    color: #0284c7;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+    .reg-box {
+        flex-direction: column;
+        max-width: 440px;
+    }
+
+    .reg-left {
+        width: 100%;
+        padding: 2rem 1.5rem;
+    }
+
+    .reg-right {
+        padding: 2rem 1.5rem;
+    }
+
+    .reg-row {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,2382 @@
+================================================================================
+HEALTHCARE FRAUD DETECTION SYSTEM - POLICIES KNOWLEDGE BASE
+Sources: Medicare Benefit Policy Manual Chapter 15 & Chapter 6 (CMS Official)
+Dataset: Shifa Hospital Healthcare Fraud Detection FYP
+================================================================================
+
+NOTE: This file contains service-speciality policies extracted from official 
+CMS Medicare documents. These policies define which services are allowed for 
+which specialities and under what conditions. Any billing outside these rules 
+is considered FRAUDULENT.
+
+================================================================================
+SECTION 1: CARDIOLOGIST / SURGERY - CARDIAC / PEDIATRIC CARDIOLOGIST
+Source: Chapter 15, Section 232 - Cardiac Rehabilitation (CR) and ICR Services
+================================================================================
+
+ALLOWED CONDITIONS (Diagnoses):
+- Acute myocardial infarction (heart attack) within the preceding 12 months
+- Coronary artery bypass surgery
+- Current stable angina pectoris
+- Heart valve repair or replacement
+- Percutaneous transluminal coronary angioplasty (PTCA) or coronary stenting
+- Heart or heart-lung transplant
+- Stable chronic heart failure
+
+ALLOWED SERVICES:
+- ECG 12 Lead
+- ECHO 2D & M Mode With Doppler
+- Fetal Echo / Pediatric Echo
+- Cardiac Profile (CPKMB, Troponin-I)
+- BNP (B-type Natriuretic Peptide)
+- 48 Hours Holter
+- Exercise Therapy / Cardiac Rehabilitation sessions
+- Psychosocial Assessment
+- Chest X-ray (for cardiac conditions)
+- Pulmonary Angiography + Chest
+- Private Ward with Telemetry - Cardiac Centre
+- Cardiac Surgery (Surgery - Cardiac)
+- Diagnostic Angiography W Supplies
+- Physician prescribed exercise program
+- Education and counseling for cardiac risk factors
+
+FRAUD RULES:
+- FRAUD: Cardiac Rehabilitation billed without any of the above covered conditions
+- FRAUD: More than 2 one-hour sessions per day billed
+- FRAUD: More than 36 sessions billed without MAC approval
+- FRAUD: Cardiac services billed without physician supervision
+- FRAUD: Cardiac Rehab billed by non-cardiologist without referral
+- FRAUD: Same ECG interpreted and billed twice for same patient same day
+- FRAUD: ECHO billed without cardiac diagnosis
+
+================================================================================
+SECTION 2: PULMONOLOGIST
+Source: Chapter 15, Section 231 - Pulmonary Rehabilitation (PR) Program Services
+================================================================================
+
+ALLOWED CONDITIONS (Diagnoses):
+- Chronic Obstructive Pulmonary Disease (COPD) - moderate to very severe (GOLD II, III, IV)
+- COVID-19 with persistent respiratory symptoms for 4+ weeks
+- Other chronic respiratory diseases (as per NCD)
+
+ALLOWED SERVICES:
+- Chest X-ray 1 View
+- Arterial Blood Gases
+- Pulmonary Angiography + Chest
+- Bronchoscopy
+- Bronchial wash C/S
+- Sputum C/S
+- Respiratory Syncytial Virus (RSV)
+- AFB Smear / AFB C/S
+- Chest Physiotherapy
+- Pulmonary Function Tests
+- Ventilator (Upto 4 Hours / per day / per shift)
+- Exercise Therapy (breathing retraining, aerobic exercise)
+- Psychosocial Assessment
+- Patient Education on respiratory management
+
+FRAUD RULES:
+- FRAUD: Pulmonary Rehab billed without COPD or qualifying respiratory diagnosis
+- FRAUD: More than 2 sessions per day billed
+- FRAUD: More than 36 sessions billed without approval
+- FRAUD: Ventilator billed without critical respiratory condition
+- FRAUD: Chest Physiotherapy billed without respiratory diagnosis
+- FRAUD: Bronchoscopy billed without valid respiratory indication
+
+================================================================================
+SECTION 3: ORTHOPEDIC / PHYSICAL MED & REHABILITATION
+Source: Chapter 15, Section 220 - Coverage of Outpatient Rehabilitation Therapy
+================================================================================
+
+ALLOWED CONDITIONS (Diagnoses):
+- Fractures and dislocations
+- Back pain / spine conditions
+- Knee, hip, shoulder injuries
+- Post-surgical rehabilitation
+- Musculoskeletal disorders
+- Sports injuries
+
+ALLOWED SERVICES:
+- Physical Therapist - Consultation
+- Exercises / Exercise for 5 min
+- Chest Physiotherapy (post-surgical)
+- Splint Short Leg
+- X-Ray (Ankle, Knee, Femur, Foot, Wrist, Cervical Spine, Pelvis, Skull)
+- Ankle 3 Views / Ankle Joint 2 View
+- Foot 2 View / Foot 3 Views
+- Femur 2 Views
+- Cervical Spine - 2 Views
+- Pelvis 1 View / Pelvis 3 views
+- Wrist 2 View
+- Fore Arm 2 Views
+- Scaphoid 4 View
+- Skull 2 Views
+- MRI (Spine, Knee, Shoulder)
+- Removal implant infection requiring debridement
+- Repair of small laceration
+- Procedure Cat.A
+- Small Biopsy
+
+FRAUD RULES:
+- FRAUD: Physical therapy billed without a physician-established plan of care
+- FRAUD: Therapy services billed beyond medically necessary duration without re-evaluation
+- FRAUD: Orthopedic X-Rays billed for unrelated diagnosis (e.g., chest X-ray by orthopedic)
+- FRAUD: Physical therapy billed without physician referral
+- FRAUD: Rehabilitation billed without documented patient improvement or medical necessity
+- FRAUD: Splint/cast billed without fracture or dislocation diagnosis
+
+================================================================================
+SECTION 4: PSYCHIATRIST
+Source: Chapter 6, Section 70 - Outpatient Hospital Psychiatric Services
+================================================================================
+
+ALLOWED CONDITIONS (Diagnoses):
+- Depression / Major Depressive Disorder
+- Anxiety Disorders
+- Schizophrenia / Psychotic Disorders
+- Bipolar Disorder
+- Eating Disorders
+- Substance Use Disorder (SUD)
+- Mood Disorders
+- Acute mental illness requiring intensive care
+
+ALLOWED SERVICES:
+- Individual and group psychotherapy
+- Psychiatric evaluation and consultation
+- Psychosocial Assessment
+- Occupational Therapy (if part of treatment plan)
+- Drugs and biologicals that cannot be self-administered
+- Activity therapies (individualized, essential for treatment)
+- Family counseling services
+- Patient education programs (related to treatment)
+- Diagnostic services for mental health assessment
+- Partial Hospitalization Program (PHP) services
+- Intensive Outpatient Program (IOP) services
+
+FRAUD RULES:
+- FRAUD: Psychiatric services billed without individualized treatment plan
+- FRAUD: Psychiatric billing without physician supervision and periodic evaluation
+- FRAUD: Activity therapies billed that are primarily recreational/diversional
+- FRAUD: Vocational training billed as psychiatric service
+- FRAUD: Meals and transportation billed as psychiatric services
+- FRAUD: Psychiatric services billed for patient who cannot participate in active treatment
+- FRAUD: PHP billed when patient does not require inpatient-level care
+- FRAUD: IOP billed without minimum 9 hours/week requirement being met
+- FRAUD: Duplicate billing for same psychiatric session
+
+================================================================================
+SECTION 5: NEPHROLOGIST
+Source: Chapter 6, Section 60 - Peritoneal Dialysis; Chapter 15, Section 310
+================================================================================
+
+ALLOWED CONDITIONS (Diagnoses):
+- End Stage Renal Disease (ESRD)
+- Chronic Kidney Disease (CKD)
+- Acute Kidney Injury
+- Kidney Disease requiring patient education
+
+ALLOWED SERVICES:
+- Pre-dialysis Profile (New)
+- Creatinine Serum
+- BUN
+- Albumin to Creatinine Ratio (ACR)
+- Urine Osmolality
+- Urine R/E
+- Urine C/S
+- Spot Urine Calcium / Creatinine / Potassium / Sodium / Protein
+- Electrolytes (Sodium, Potassium, Bicarbonate, Phosphorous)
+- Urinary Catheter
+- Kidney Disease Patient Education Services
+- Both Kidneys or GenitoUrinary Tract (Ultrasound)
+- Renin / Aldosterone
+- Peritoneal Dialysis
+- Hemodialysis
+
+FRAUD RULES:
+- FRAUD: Dialysis billed without ESRD or qualifying kidney disease diagnosis
+- FRAUD: Kidney education billed more than allowed sessions
+- FRAUD: Dialysis services billed without physician oversight
+- FRAUD: Lab tests billed unrelated to kidney function without valid diagnosis
+- FRAUD: Double billing for dialysis sessions
+
+================================================================================
+SECTION 6: ENDOCRINOLOGIST
+Source: Chapter 15, Section 300 - Diabetes Self-Management Training
+================================================================================
+
+ALLOWED CONDITIONS (Diagnoses):
+- Diabetes Mellitus (Type 1 and Type 2)
+- Pre-diabetes
+- Thyroid disorders
+- Hormonal imbalances
+- Adrenal disorders
+
+ALLOWED SERVICES:
+- HBA1C
+- Fasting Chem 7 (blood glucose related)
+- TSH / Free T4 / T4
+- Cortisol
+- A.C.T.H (AdrenoCorticoTropic Hormone)
+- Insulin levels
+- Aldosterone / Renin
+- Diabetes Self-Management Training
+- Therapeutic Shoes for Individuals with Diabetes
+- Blood glucose monitoring education
+- Diet and exercise counseling
+- Chem profiles (Chem 6, 7, 8, 10, 11, 12)
+
+FRAUD RULES:
+- FRAUD: Diabetes management billed without confirmed diabetes diagnosis
+- FRAUD: Diabetes Self-Management Training billed by non-certified provider
+- FRAUD: Thyroid tests billed repeatedly without documented medical necessity
+- FRAUD: Hormonal tests billed without relevant endocrine diagnosis
+- FRAUD: Therapeutic shoes billed without diabetes diagnosis
+
+================================================================================
+SECTION 7: ANESTHESIOLOGIST
+Source: Chapter 6, Section 20.1.2 - Anesthetist Services
+================================================================================
+
+ALLOWED CONDITIONS (Diagnoses):
+- Any surgical procedure requiring anesthesia
+- Procedures requiring sedation
+- Intubation cases
+- Critical care procedures
+
+ALLOWED SERVICES:
+- Anaesthesia upto 45 Minutes
+- Anesthetist Fee
+- Endotracheal Intubation W/O Tube
+- Ventilator services (in surgical context)
+- CARM up to 10 min
+
+FRAUD RULES:
+- FRAUD: Anesthesia billed without corresponding surgical procedure
+- FRAUD: Anesthesia time billed exceeding actual procedure time
+- FRAUD: Anesthesia billed by unlicensed or unqualified provider
+- FRAUD: Duplicate anesthesia billing for same procedure
+- FRAUD: Anesthesia billed for non-surgical outpatient visit
+
+================================================================================
+SECTION 8: GENERAL SURGEON / PEDIATRIC SURGEON / SURGERY - PLASTIC
+Source: Chapter 15, Section 260 - Ambulatory Surgical Center Services
+================================================================================
+
+ALLOWED CONDITIONS (Diagnoses):
+- Conditions requiring surgical intervention
+- Appendicitis (Appendicectomy)
+- Gallbladder disease (Cholecystectomy)
+- Hernia
+- Tumor/mass excision
+- Wound repair
+- Abscess drainage
+
+ALLOWED SERVICES:
+- Procedure Cat.A
+- Small Biopsy
+- Excision Biopsy of Breast Tumor (Daycare)
+- Excision Biopsy of Sebaceous Cyst (Daycase)
+- Repair of small laceration
+- Surgical dressings
+- Splints, casts and other devices
+- Day Care Charges
+- Surgical Drains/Supplies
+- Pre-Op Screening Profile (HBsAg & Anti HCV)
+- Dilation & Curettage (D/C)
+
+FRAUD RULES:
+- FRAUD: Surgical procedure billed without documented medical necessity
+- FRAUD: ASC services billed by non-certified facility
+- FRAUD: Surgical services billed without post-operative documentation
+- FRAUD: Biopsy billed multiple times for same site
+- FRAUD: Pre-op screening billed without corresponding surgical procedure
+- FRAUD: Surgical services billed by non-surgeon speciality
+
+================================================================================
+SECTION 9: EMERGENCY / CRITICAL CARE
+Source: Chapter 6, Section 20.6 - Outpatient Observation Services; Section 40
+================================================================================
+
+ALLOWED CONDITIONS (Diagnoses):
+- Any acute emergency condition
+- Trauma
+- Cardiac emergencies
+- Respiratory emergencies
+- Stroke
+- Sepsis
+- Any condition requiring urgent/emergent care
+
+ALLOWED SERVICES:
+- Emergency Physician Charges
+- Emergency Services Charges (8am-8pm)
+- Emergency Services Charges (8pm onward)
+- Observation services (per hour - HCPCS G0378)
+- ICU services (Initial and Follow-up visits)
+- Ventilator (Upto 4 Hours / per day / per shift)
+- Endotracheal Intubation W/O Tube
+- Central Venous Line Without CVP
+- Portable X-ray Charges
+- Portable Ultrasound
+- Portable Service Charges
+- Blood Gases, Lactate & BUN - POCT
+- CHEM-8 Profile - POCT
+- Urine Dipstick - POCT
+- Stroke - Step down
+- Surfactant Administration
+- Photo Therapy 24H
+
+FRAUD RULES:
+- FRAUD: Observation services billed for more than 48 hours without rare exception
+- FRAUD: Emergency charges billed for non-emergency routine visits
+- FRAUD: Portable services billed multiple times for same transport trip
+- FRAUD: ICU billing without documentation of critical condition
+- FRAUD: Emergency services billed without corresponding emergency diagnosis
+
+================================================================================
+SECTION 10: OB/GYNE
+Source: Chapter 15, Section 280.4 - Screening Pap Smears; Section 20
+================================================================================
+
+ALLOWED CONDITIONS (Diagnoses):
+- Pregnancy and delivery
+- Gynecological conditions
+- Cervical cancer screening
+- Pelvic inflammatory disease
+- Ovarian conditions
+- Infertility treatment
+
+ALLOWED SERVICES:
+- Screening Pap Smears and Pelvic Exams
+- BHCG
+- 17 OH Progesterone
+- Anti Mullerian Hormone
+- DATING SCAN / VIABILITY SCAN TVS
+- GROWTH SCAN
+- C.T.G. For 15 Min / 30 Min
+- FEMALE PELVIC DOPPLER
+- Antenatal Profile
+- Complex B (OB/GY)
+- Pelvis Scan With Vaginal Probe
+- Deliveries (Normal, Caesarean, Instrumental, VBAC, Twin)
+- Tubal Ligation by Mini Laparotomy
+- Dilation & Curettage (D/C)
+- Fetal Echo / Pediatric Echo
+- Torch Profile
+
+FRAUD RULES:
+- FRAUD: Obstetric services billed for male patients
+- FRAUD: Delivery services billed without corresponding delivery records
+- FRAUD: Pap smear billed more frequently than allowed (once per year standard)
+- FRAUD: OB/Gyne procedures billed without relevant female diagnosis
+- FRAUD: Duplicate billing for delivery and associated procedures
+
+================================================================================
+SECTION 11: OPHTHALMOLOGIST
+Source: Chapter 15, Section 30.4 - Optometrist Services; Section 280.1 - Glaucoma Screening
+================================================================================
+
+ALLOWED CONDITIONS (Diagnoses):
+- Cataracts
+- Glaucoma
+- Retinal conditions
+- Vision disorders requiring surgery
+- Eye infections
+
+ALLOWED SERVICES:
+- A Scan Biometry for Cataract Surgery
+- Pheco Surgery G/A / L/A / Under MAC
+- Corneal Transplant - Daycase
+- Screening Glaucoma Services
+- Ear / Petrus Bone (related imaging)
+- Urine Dipstick Only (pre-op)
+- Pre-Op Screening Profile
+
+FRAUD RULES:
+- FRAUD: Cataract surgery billed without documented cataract diagnosis
+- FRAUD: Glaucoma screening billed more than once per year per eye without risk factors
+- FRAUD: Eye surgery billed by non-ophthalmologist
+- FRAUD: Pre-op testing billed without corresponding surgical procedure
+
+================================================================================
+SECTION 12: BLOOD BANK STAFF / MEDICAL SPECIALIST
+Source: Chapter 6, Section 70.5 - Laboratory Services; Chapter 15, Section 80
+================================================================================
+
+ALLOWED CONDITIONS (Diagnoses):
+- Any condition requiring blood products
+- Transfusion-dependent conditions
+- Bleeding disorders
+- Anemia
+- Any condition requiring diagnostic laboratory tests
+
+ALLOWED SERVICES:
+- Blood Crossmatch
+- Pack Red Cell
+- Fresh Frozen Plasma
+- Platelet Concentrate
+- Cryo Precipitates (per bag)
+- ABO Group & Rh / Abo Group & Rh
+- ABO Antibody Titeration
+- Peripheral Film
+- CBC Diff Profile
+- CD4 Counts (Lymphocyte Subsets)
+- Hemophilia clotting factors
+- Immunosuppressive drugs
+- All diagnostic laboratory tests ordered by authorized physician
+
+FRAUD RULES:
+- FRAUD: Blood products billed without transfusion order
+- FRAUD: Laboratory tests billed without physician order
+- FRAUD: Same lab test billed twice for same patient same day
+- FRAUD: Blood bank services billed for outpatient without valid diagnosis
+- FRAUD: Lab tests billed by unauthorized personnel
+
+================================================================================
+SECTION 13: ALL SPECIALITIES - GENERAL DIAGNOSTIC RULES
+Source: Chapter 15, Section 80 - Requirements for Diagnostic X-Ray, Lab, and Tests
+================================================================================
+
+GENERAL RULES FOR ALL DIAGNOSTIC SERVICES:
+
+ORDERING RULES:
+- All diagnostic tests must be ordered by a licensed physician or authorized NPP
+- Physician assistants, nurse practitioners, and clinical nurse specialists may order tests
+- Tests must be medically necessary and appropriate for the patient's condition
+
+SUPERVISION RULES:
+- Diagnostic X-rays require physician supervision
+- Laboratory tests require physician order
+- High-complexity tests require direct physician supervision
+
+FRAUD RULES APPLICABLE TO ALL SPECIALITIES:
+- FRAUD: Diagnostic test ordered without physician authorization
+- FRAUD: Test billed that was not medically necessary for the diagnosis
+- FRAUD: Same diagnostic test billed twice for same date of service
+- FRAUD: Diagnostic test billed by speciality not qualified to order it
+  (e.g., Brain MRI ordered by Orthopedic for back pain = FRAUD)
+- FRAUD: Test results not documented in patient record but billed
+- FRAUD: Upcoding - billing for higher complexity test than performed
+- FRAUD: Phantom billing - billing for test never performed
+
+BONE MASS MEASUREMENTS (Source: Section 80.5):
+- Allowed for: estrogen-deficient women at risk, individuals with vertebral abnormalities,
+  individuals receiving long-term glucocorticoid therapy, hyperparathyroidism,
+  individuals being monitored to assess osteoporosis therapy
+- FRAUD: Bone density test billed without qualifying condition
+- FRAUD: Bone density test billed more than once every 2 years without exception
+
+================================================================================
+SECTION 14: WARD / ROOM / ADMISSION CHARGES - GENERAL RULES
+Source: Chapter 6, Section 10 - Medical and Other Health Services to Inpatients
+================================================================================
+
+ALLOWED SERVICES:
+- Private Room / Private Plus Room
+- Semi Private Room
+- Ward (General)
+- Private Ward
+- NICU / PICU
+- ICU (Critical Care)
+- Admission fee - Regular
+- Day Care Charges
+- Registration Fee
+- Service Charges (HHS)
+- Rx Services - IPD
+- Portable Service Charges
+
+FRAUD RULES:
+- FRAUD: Room charges billed for days patient was not admitted
+- FRAUD: Higher room category billed than actually occupied
+- FRAUD: ICU billing without documented ICU-level care
+- FRAUD: Duplicate admission charges for same hospitalization
+- FRAUD: NICU/PICU charges without pediatric patient admission
+
+================================================================================
+SECTION 15: DOCTOR VISIT CHARGES (doc_XX format)
+Source: Chapter 6, Section 20 - Outpatient Hospital Services
+================================================================================
+
+ALLOWED SERVICES:
+- IPD Initial Visit (first consultation)
+- IPD Follow-up Visit (subsequent consultations)
+- ICU Initial Visit
+- ICU Follow-up Visit
+- ER Visit (Emergency Room)
+
+FRAUD RULES:
+- FRAUD: IPD Initial Visit billed more than once per admission per doctor
+- FRAUD: Follow-up visit billed on same day as initial visit by same doctor
+- FRAUD: ICU visit billed without patient being in ICU
+- FRAUD: ER visit billed for non-emergency situation
+- FRAUD: Multiple doctors billing initial visit for same patient same day
+  without documented separate consultations
+
+================================================================================
+MASTER FRAUD DETECTION RULES - FROM CMS OFFICIAL DOCUMENTS
+================================================================================
+
+RULE 1 - MEDICAL NECESSITY (Chapter 15, Section 80):
+Any service billed must be MEDICALLY NECESSARY for the patient's diagnosed condition.
+Billing for unnecessary services = FRAUD.
+
+RULE 2 - AUTHORIZED ORDERING (Chapter 15, Section 80.6):
+All diagnostic tests must be ordered by an authorized physician or NPP.
+Tests without valid physician order = FRAUD.
+
+RULE 3 - NO DUPLICATE BILLING (Chapter 6, Section 20):
+Same service cannot be billed twice for the same patient on the same date.
+Duplicate claims = FRAUD.
+
+RULE 4 - SPECIALITY SCOPE (Chapter 15, Section 30):
+Services must be within the ordering physician's scope of practice.
+Out-of-scope services = FRAUD.
+
+RULE 5 - DOCUMENTATION (Chapter 6, Section 70.3):
+All services must have corresponding documentation in patient records.
+Undocumented services billed = FRAUD (Phantom Billing).
+
+RULE 6 - SESSION LIMITS (Chapter 15, Sections 231, 232):
+Rehabilitation services have maximum session limits.
+Exceeding limits without approval = FRAUD.
+
+================================================================================
+END OF POLICIES KNOWLEDGE BASE
+Source Documents: 
+1. Medicare Benefit Policy Manual - Chapter 15 (CMS)
+2. Medicare Benefit Policy Manual - Chapter 6 (CMS)
+Dataset Reference: Shifa Hospital FYP Dataset
+================================================================================
+
+================================================================================
+SECTION 16: PAIN MANAGEMENT
+Source: NCD Manual Chapter 1 Part 1, Section 10.4 - Outpatient Pain Rehabilitation
+================================================================================
+
+ALLOWED CONDITIONS (Diagnoses):
+- Chronic intractable pain with physical cause
+- Pain where usual treatments have failed
+- Pain causing significant loss of ability to function independently
+- Post-surgical pain
+- Musculoskeletal pain disorders
+- Fibromyalgia (with acupuncture - Section 30.3.1)
+- Osteoarthritis (with acupuncture - Section 30.3.2)
+- Chronic Lower Back Pain (Section 30.3.3)
+
+ALLOWED SERVICES:
+- Physical Therapist - Consultation
+- Exercises / Exercise for 5 min
+- TENS (Transcutaneous Electrical Nerve Stimulation) - for acute post-operative pain
+- Biofeedback Therapy (for urinary incontinence related pain)
+- Acupuncture (for chronic lower back pain, fibromyalgia, osteoarthritis)
+- Splint Short Leg
+- Procedure Cat.A
+- Pain rehabilitation program services (group or individual)
+- Psychological assessment and treatment
+- Physiotherapy
+
+FRAUD RULES:
+- FRAUD: Pain rehabilitation billed without documented physical cause of pain
+- FRAUD: Pain program billed without individualized treatment plan
+- FRAUD: TENS billed for non-post-operative pain
+- FRAUD: Acupuncture billed for conditions other than chronic lower back pain, fibromyalgia, or osteoarthritis
+- FRAUD: Pain management services billed without documented failure of standard treatments
+- FRAUD: Pain rehabilitation billed without physician supervision
+
+================================================================================
+SECTION 17: ENT SPECIALIST
+Source: NCD Manual Chapter 1 Part 1, Section 50 - Ear, Nose and Throat
+================================================================================
+
+ALLOWED CONDITIONS (Diagnoses):
+- Bilateral moderate-to-profound sensorineural hearing loss
+- Meniere's Disease
+- Tinnitus
+- Throat/tonsil conditions
+- Nasal/sinus conditions
+- Ear infections
+
+ALLOWED SERVICES:
+- Cochlear Implantation (bilateral moderate-to-profound hearing loss)
+- Speech Generating Devices
+- Electronic Speech Aids
+- Tracheostomy Speaking Valve
+- Adenotonsillectomy (SPvt/1Day)
+- Tonsillectomy (Ward/1Day)
+- Tonsillectomy W/Turbinate Reduction (Ward/1D)
+- FESS Complex (Pvt/1Day) / (Ward/1Day) - Functional Endoscopic Sinus Surgery
+- Septoplasty W Turbinate Reduction (Ward/1Day)
+- Ear / Petrus Bone (imaging)
+- Ear/IAM's without Contrast (MRI)
+- Throat Swab C/S
+- Facial Bones 3 Views
+
+FRAUD RULES:
+- FRAUD: Cochlear implant billed without documented hearing loss meeting criteria
+- FRAUD: ENT surgery billed without relevant ENT diagnosis
+- FRAUD: Tonsillectomy billed without documented tonsil condition
+- FRAUD: FESS billed without documented sinus condition
+- FRAUD: Speech devices billed without documented speech/hearing impairment
+- FRAUD: Ear imaging billed for non-ENT diagnosis
+
+================================================================================
+SECTION 18: OPHTHALMOLOGIST (UPDATED)
+Source: NCD Manual Chapter 1 Part 1, Sections 80.10, 80.11, 80.12
+================================================================================
+
+ALLOWED CONDITIONS (Diagnoses):
+- Cataracts (for Phaco-Emulsification / Surgery)
+- Vitreous loss / hemorrhage
+- Retinal detachment
+- Proliferative retinopathy
+- Glaucoma
+- Vision disorders
+
+ALLOWED SERVICES:
+- Phaco-Emulsification (Cataract Extraction) = Pheco Surgery G/A, L/A, Under MAC
+- Vitrectomy (for vitreous conditions, retinal detachment)
+- Intraocular Lenses (IOLs) implantation
+- A Scan Biometry for Cataract Surgery (pre-implantation ultrasound)
+- Corneal Transplant - Daycase
+- Glaucoma Screening
+- Computer Enhanced Perimetry
+- Endothelial Cell Photography
+- Intraocular Photography
+
+FRAUD RULES:
+- FRAUD: Cataract surgery billed without confirmed cataract diagnosis
+- FRAUD: Vitrectomy billed for conditions not meeting covered indications
+- FRAUD: IOL billed without corresponding cataract surgery
+- FRAUD: A-Scan Biometry billed without planned cataract surgery
+- FRAUD: Eye surgery billed by non-ophthalmologist
+- FRAUD: Multiple eye surgeries billed for same eye same admission without documentation
+
+================================================================================
+SECTION 19: CARDIOLOGIST - ADDITIONAL RULES (UPDATED)
+Source: NCD Manual Chapter 1 Part 1, Sections 20.4, 20.8, 20.10.1, 20.19
+================================================================================
+
+ADDITIONAL ALLOWED CONDITIONS:
+- Sustained ventricular tachyarrhythmia (for ICD)
+- Cardiac arrest due to ventricular fibrillation (for ICD)
+- Second or third degree AV block (for Pacemaker)
+- Symptomatic sinus bradycardia (for Pacemaker)
+- Suspected white coat hypertension (for Ambulatory BP Monitoring)
+- Chronic Heart Failure (for Cardiac Rehabilitation)
+
+ADDITIONAL ALLOWED SERVICES:
+- ECG 12 Lead - for cardiac arrhythmia, chest pain, cardiac monitoring
+- 48 Hours Holter - for suspected arrhythmia
+- Cardiac Pacemaker implantation and evaluation
+- Implantable Cardioverter Defibrillator (ICD)
+- Ambulatory Blood Pressure Monitoring - ONLY for suspected white coat hypertension
+- Transcatheter Aortic Valve Replacement (TAVR)
+- Carotids Ultrasound Doppler
+- Diagnostic Angiography
+
+ADDITIONAL FRAUD RULES:
+- FRAUD: Ambulatory BP Monitoring billed for conditions other than suspected white coat hypertension
+- FRAUD: Pacemaker implantation billed without documented arrhythmia indications
+- FRAUD: ICD billed without documented ventricular tachyarrhythmia or cardiac arrest history
+- FRAUD: ECG billed without any cardiac indication
+- FRAUD: Chelation therapy billed for atherosclerosis (NOT covered per NCD 20.21)
+- FRAUD: Cardiointegram billed as alternative to stress test (NOT covered per NCD 20.27)
+
+================================================================================
+SECTION 20: ENDOCRINOLOGIST - ADDITIONAL RULES (UPDATED)
+Source: NCD Manual Chapter 1 Part 1, Sections 40.1, 40.2, 40.3
+================================================================================
+
+ADDITIONAL ALLOWED SERVICES:
+- Diabetes Self-Management Training (covered per 42 CFR 410.140-410.146)
+- Home Blood Glucose Monitors (for insulin-treated diabetics)
+- Closed-Loop Blood Glucose Control Device
+- Insulin Syringe (for insulin-dependent patients)
+- HBA1C monitoring
+
+ADDITIONAL FRAUD RULES:
+- FRAUD: Home glucose monitor billed for non-diabetic patient
+- FRAUD: Diabetes training billed more than initial 10 hours without annual follow-up justification
+- FRAUD: Glucose monitoring equipment billed without insulin-dependent diabetes diagnosis
+- FRAUD: Obesity treatment billed as covered service (NOT covered per NCD 40.5 - Treatment of Obesity is NOT covered)
+
+================================================================================
+END OF NCD PART 1 ADDITIONS
+================================================================================
+
+
+================================================================================
+SECTION 16: ENT SPECIALIST
+Source: NCD Manual Chapter 1 Part 1, Section 50 - Ear, Nose and Throat
+================================================================================
+
+ALLOWED CONDITIONS (Diagnoses):
+- Severe speech impairment
+- Bilateral moderate-to-profound sensorineural hearing loss
+- Middle ear infections
+- Tinnitus
+- Meniere's Disease
+- Sinusitis / Nasal conditions
+- Tonsil and adenoid conditions
+- Throat conditions requiring surgery
+
+ALLOWED SERVICES:
+- Adenotonsillectomy (SPvt/1Day)
+- Tonsillectomy (Ward/1Day)
+- Tonsillectomy W/Turbinate Reduction (Ward/1D)
+- Septoplasty W Turbinate Reduction (Ward/1Day)
+- FESS Complex (Pvt/1Day) / (Ward/1Day)
+- Ear/IAM's without Contrast (CT scan for ear)
+- Ear / Petrus Bone (imaging)
+- Throat Swab C/S
+- Facial Bones 3 Views
+- Skull 2 Views
+
+FRAUD RULES:
+- FRAUD: Cochlear implant billed without documented bilateral sensorineural hearing loss
+- FRAUD: Tonsillectomy billed without documented indication
+- FRAUD: ENT surgery billed without pre-operative diagnosis
+- FRAUD: Cochlear implant billed for patient who did not fail hearing aid trial
+- FRAUD: ENT services billed by non-ENT speciality
+- FRAUD: Sinus surgery billed without documented sinus condition
+
+================================================================================
+SECTION 17: PAIN MANAGEMENT
+Source: NCD Manual Chapter 1 Part 1, Sections 10.3 and 10.4
+================================================================================
+
+ALLOWED CONDITIONS (Diagnoses):
+- Intractable/chronic pain with physical cause
+- Pain not responding to usual treatment methods
+- Significant loss of independent function due to pain
+- Post-surgical pain
+- Back pain / spine-related pain
+- Nerve pain
+
+ALLOWED SERVICES:
+- Physical Therapist - Consultation
+- Exercises / Exercise for 5 min
+- Chest Physiotherapy (if respiratory component)
+- Splint Short Leg (if musculoskeletal)
+- Transcutaneous Electrical Nerve Stimulation (TENS)
+- Diagnostic X-Rays related to pain cause
+- Psychosocial Assessment
+- Occupational Therapy
+- Nerve stimulator services
+- Pain medications (non-self-administered)
+
+FRAUD RULES:
+- FRAUD: Pain rehabilitation billed without documented physical cause of pain
+- FRAUD: Pain management services billed when usual treatments not yet tried
+- FRAUD: Vocational counseling billed as pain management service
+- FRAUD: Meals billed as part of outpatient pain program
+- FRAUD: Acupuncture billed as covered pain management service
+- FRAUD: Pain rehab billed without individualized treatment plan
+- FRAUD: Pain management services billed by non-qualified provider
+
+================================================================================
+SECTION 18: OPHTHALMOLOGIST (UPDATED)
+Source: NCD Manual Chapter 1 Part 1, Section 80 - Eye
+================================================================================
+
+ALLOWED CONDITIONS (Diagnoses):
+- Cataracts
+- Glaucoma
+- Retinal detachment
+- Vitreous hemorrhage
+- Proliferative retinopathy
+- Corneal conditions (ulcers, edema, dystrophy)
+- Macular degeneration
+
+ALLOWED SERVICES:
+- A Scan Biometry for Cataract Surgery
+- Pheco Surgery G/A / L/A / Under MAC (Phaco-emulsification)
+- Corneal Transplant - Daycase
+- Glaucoma Screening
+- Intraocular Lens (IOL) implant
+- Vitrectomy (for vitreous loss, retinal detachment)
+- Pre-Op Screening Profile (HBsAg & Anti HCV)
+- Comprehensive eye examination
+
+FRAUD RULES:
+- FRAUD: Multiple pre-operative tests billed when only one diagnosis is cataract
+  (only 1 comprehensive exam + A-scan allowed for simple cataract)
+- FRAUD: B-scan billed for simple cataract without medical justification
+- FRAUD: Cataract surgery billed without documented cataract diagnosis
+- FRAUD: Vitrectomy billed for conditions other than: vitreous loss from cataract surgery,
+  vitreous hemorrhage, retinal detachments, proliferative retinopathy, vitreous retraction
+- FRAUD: Eye surgery billed by non-ophthalmologist
+- FRAUD: Duplicate billing for same eye procedure
+
+================================================================================
+SECTION 19: CARDIOLOGIST - ADDITIONAL (UPDATED)
+Source: NCD Manual Chapter 1 Part 1, Section 20 - Cardiovascular System
+================================================================================
+
+ADDITIONAL ALLOWED SERVICES (from NCD):
+- Cardiac Pacemaker implantation (for persistent symptomatic AV block,
+  symptomatic sinus bradycardia)
+- Percutaneous Transluminal Angioplasty (PTA)
+- Transcatheter Aortic Valve Replacement (TAVR)
+- Implantable Cardioverter Defibrillators (ICDs)
+- 48 Hours Holter (Ambulatory ECG monitoring)
+- Ventricular Assist Devices
+- Diagnostic Angiography
+
+ADDITIONAL FRAUD RULES (from NCD):
+- FRAUD: Cardiac pacemaker billed without documented symptomatic bradycardia or AV block
+- FRAUD: Chelation therapy billed for atherosclerosis treatment
+  (not covered per NCD 20.21 and 20.22)
+- FRAUD: Displacement cardiography billed (not covered per NCD 20.24)
+- FRAUD: TAVR billed without documented severe aortic stenosis
+- FRAUD: ICD billed without meeting specific NCD indications
+
+================================================================================
+END OF NCD PART 1 ADDITIONS
+================================================================================
+
+================================================================================
+SECTION 20: GASTROENTEROLOGIST
+Source: NCD Chapter 1, Part 2, Section 100
+================================================================================
+
+ALLOWED CONDITIONS (Diagnoses):
+- Morbid obesity with co-morbidity (BMI >= 35 with Type 2 diabetes, hypertension,
+  coronary artery disease, obstructive sleep apnea, or other obesity-related condition)
+- Gastroesophageal reflux disease (GERD) / suspected gastric reflux
+- Esophageal pathology (aperistalsis, spasm, achalasia, esophagitis, esophageal ulcer,
+  diverticuli, scleroderma, hiatus hernia, benign or malignant esophageal tumors)
+- Lactose malabsorption / lactose intolerance
+- Esophageal variceal bleeding
+- Gastrointestinal disorders requiring endoscopy (polyps, stones in bile duct, etc.)
+- Diseased gallbladder requiring cholecystectomy
+- Gastric ulcer or postoperative gastric bleeding requiring documentation
+
+ALLOWED SERVICES:
+
+100.1 - Bariatric Surgery (for Morbid Obesity with Co-morbidities)
+- Covered: Open/Laparoscopic Roux-en-Y Gastric Bypass (RYGBP)
+- Covered: Biliopancreatic Diversion with Duodenal Switch (BPD/DS)
+- Covered: Laparoscopic Adjustable Gastric Banding (LAGB)
+- Requirements: BMI >= 35, at least one obesity-related co-morbidity, previously
+  unsuccessful with medical treatment for obesity
+- Type 2 diabetes mellitus is an accepted co-morbidity (effective Feb 12, 2009)
+- NOT COVERED: Open adjustable gastric banding, open sleeve gastrectomy,
+  vertical banded gastroplasty, intestinal bypass surgery, gastric balloon
+- NOT COVERED: Obesity treatment alone without co-morbidities
+
+100.2 - Endoscopy
+- COVERED when reasonable and necessary for individual patient
+- Includes diagnostic AND therapeutic (polyp removal, endoscopic papillotomy)
+
+100.3 - 24-Hour Ambulatory Esophageal pH Monitoring
+- COVERED ONLY IF: atypical symptoms making diagnosis difficult, OR symptoms
+  suggest reflux but conventional tests have not confirmed it
+- NOT covered as routine test without the above indications
+
+100.4 - Esophageal Manometry
+- COVERED when reasonable and necessary
+- Used to diagnose: aperistalsis, spasm, achalasia, esophagitis, esophageal ulcer,
+  diverticuli, scleroderma, hiatus hernia, benign/malignant tumors
+- Used in difficult cases as adjunct to X-rays and endoscopy
+
+100.5 - Diagnostic Breath Analyses
+- COVERED: Lactose breath hydrogen test (for lactose malabsorption only)
+- NOT COVERED: Lactulose breath hydrogen, CO2 for bile acid or fat malabsorption
+
+100.6 - Gastric Freezing: NOT COVERED (obsolete, high complication rate)
+100.7 - Colonic Irrigation: NOT COVERED (no medical indication, no therapeutic value)
+
+100.10 - Injection Sclerotherapy for Esophageal Variceal Bleeding: COVERED
+
+100.12 - Gastrophotography: COVERED when required for consultation/follow-up
+
+100.13 - Laparoscopic Cholecystectomy: COVERED
+
+FRAUD RULES:
+- FRAUD: Bariatric surgery billed without BMI >= 35 or without documented co-morbidity
+- FRAUD: Non-covered bariatric procedures billed (open gastric banding, gastric balloon,
+  vertical banded gastroplasty, intestinal bypass)
+- FRAUD: Non-covered breath tests billed (lactulose breath hydrogen, CO2 tests)
+- FRAUD: Colonic irrigation or gastric freezing billed (explicitly non-covered)
+- FRAUD: Esophageal pH monitoring billed without documented atypical symptoms or
+  failure of conventional tests to confirm reflux
+- FRAUD: Endoscopy billed repeatedly without clinical necessity documentation
+- FRAUD: Bariatric surgery billed for obesity alone (without co-morbidity)
+
+================================================================================
+SECTION 21: INFECTIOUS DISEASES SPECIALIST
+Source: NCD Chapter 1, Part 2, Section 120
+================================================================================
+
+ALLOWED CONDITIONS (Diagnoses):
+NOTE: NCD Section 120 (Infectious Diseases) contains NO national coverage
+determinations. Coverage is determined by local Medicare Administrative Contractors
+(MACs) on a case-by-case basis per Section 1862(a)(1)(A) of the Act.
+- Granulocytopenia with gram-negative sepsis (for granulocyte transfusions)
+- Hemophilia A with factor VIII inhibitor antibodies (for AICC therapy)
+- Conditions qualifying for therapeutic apheresis (per NCD 110.14):
+  myasthenia gravis, leukemia, Waldenstrom macroglobulinemia, TTP,
+  Goodpasture syndrome, Guillain-Barre, SLE (last resort), rheumatoid vasculitis
+
+ALLOWED SERVICES:
+- Granulocyte transfusions (for granulocytopenia < 500/mm3 with gram-negative sepsis
+  or progressive local infection unresponsive to antibiotics)
+- Anti-inhibitor coagulant complex (AICC) for hemophilia A (after other therapies failed)
+- Therapeutic apheresis for qualifying conditions listed above
+- Standard diagnostic and therapeutic services as determined by local MAC
+
+NOT COVERED SERVICES:
+- Sublingual antigen/allergy therapy: NOT COVERED (NCD 110.9)
+- Cytotoxic food tests: NOT COVERED (NCD 110.13)
+- Food allergy sublingual/subcutaneous provocative testing: NOT COVERED (NCD 110.11)
+
+FRAUD RULES:
+- FRAUD: Sublingual antigen therapy billed (explicitly non-covered per NCD 110.9)
+- FRAUD: Cytotoxic food tests billed (explicitly non-covered per NCD 110.13)
+- FRAUD: Granulocyte transfusions billed without documented granulocytopenia < 500/mm3
+- FRAUD: AICC therapy billed without documented hemophilia A with inhibitor antibodies
+- FRAUD: Apheresis billed for conditions not listed in NCD 110.14 covered indications
+- FRAUD: Experimental treatments billed as standard covered services
+
+================================================================================
+SECTION 22: NEUROLOGIST / NEUROSURGEON
+Source: NCD Chapter 1, Part 2, Section 160
+================================================================================
+
+ALLOWED CONDITIONS (Diagnoses):
+- Chronic/acute intractable pain from terminal cancer or lumbar degenerative arthritis
+  (for nerve tract lesions, peripheral and CNS stimulators)
+- Focal epilepsy unresponsive to anticonvulsant medications
+  (for stereotaxic depth electrode, VNS)
+- Medically refractory partial onset seizures where surgery failed or not recommended
+  (for VNS)
+- Head injuries, subarachnoid hemorrhage, intracerebral hemorrhage, Reye syndrome,
+  encephalopathies (for invasive intracranial pressure monitoring)
+- Disuse atrophy with intact nerve supply (for NMES)
+- Spinal cord injury (SCI) for walking rehabilitation (for NMES/FES)
+- Partial or complete respiratory insufficiency with intact phrenic nerve (for phrenic stimulator)
+- Essential tremor (ET) with disabling tremor level 3-4 on rating scale (for DBS)
+- Parkinson Disease (idiopathic, at least 2 cardinal features) with persistent
+  disabling symptoms despite optimal medical therapy (for DBS)
+- Cerebrovascular surgery patients at risk of reduced cerebral perfusion
+  (for EEG monitoring during surgery)
+- Treatment-resistant depression (TRD) ONLY under CMS-approved CED clinical study (for VNS)
+
+ALLOWED SERVICES:
+
+160.1 - Induced Lesions of Nerve Tracts (Denervation)
+- COVERED for chronic/acute pain from terminal cancer or lumbar degenerative arthritis
+- Methods: surgical cutting (rhizolysis), chemical destruction, radio-frequency lesion
+- Covered only in selected cases concurred by MAC medical staff
+
+160.5 - Stereotaxic Depth Electrode Implantation
+- COVERED prior to surgical treatment of focal epilepsy
+- For patients unresponsive to anticonvulsant medications
+
+160.7 - Electrical Nerve Stimulators (for Chronic Intractable Pain)
+- Implanted Peripheral Nerve Stimulators: COVERED as prosthetic device
+- CNS Stimulators (Dorsal Column or Deep Brain): COVERED IF:
+  * Used as last resort after other treatments failed
+  * Patient underwent multidisciplinary screening (psychological and physical)
+  * All required facilities and personnel are available
+  * Trial with temporary electrode demonstrated pain relief before permanent implant
+
+160.8 - EEG Monitoring During Cerebral Vascular Surgery: COVERED
+160.10 - Evoked Response Tests (brain stem, visual evoked response): COVERED
+
+160.12 - Neuromuscular Electrical Stimulator (NMES)
+- COVERED for disuse atrophy where nerve supply to muscle is intact
+- COVERED for SCI patients for walking (FES) IF:
+  * Completed minimum 32 PT sessions over 3 months
+  * Intact lower motor unit (L1 and below)
+  * Minimum 6 months post-spinal cord injury
+  * No cardiac pacemaker, severe scoliosis, severe osteoporosis, irreversible contracture
+
+160.14 - Invasive Intracranial Pressure Monitoring
+- COVERED when medically necessary in neurosurgical/neurologic ICU
+- Indicated for: head injuries, subarachnoid hemorrhage, intracerebral hemorrhage,
+  Reye syndrome, encephalopathies
+
+160.18 - Vagus Nerve Stimulation (VNS)
+- COVERED for medically refractory partial onset seizures (surgery failed or not recommended)
+- COVERED for treatment-resistant depression ONLY under CMS-approved CED study
+- NOT COVERED: All other seizure types
+- NOT COVERED: Depression treatment outside CED study
+
+160.19 - Phrenic Nerve Stimulator
+- COVERED for selected patients with partial/complete respiratory insufficiency
+- Requires intact phrenic nerve and diaphragm
+
+160.21 - Telephone Transmission of EEGs: COVERED when reasonable and necessary
+
+160.24 - Deep Brain Stimulation (DBS) for Essential Tremor and Parkinson Disease
+- COVERED with FDA-approved device only
+- ET: thalamic VIM DBS required; PD: STN or GPi DBS
+- Tremor level must be 3 or 4 on Fahn-Tolosa-Marin Clinical Tremor Rating Scale
+- Disabling symptoms despite optimal medical therapy required
+- NOT COVERED: Non-idiopathic PD or Parkinson Plus syndromes
+- NOT COVERED: Cognitive impairment, dementia, current psychosis, alcohol/drug abuse
+- NOT COVERED: Structural lesions (stroke, tumor) as etiology of movement disorder
+- Neurosurgeon must be trained in stereotactic procedures
+- Hospital must have brain imaging (MRI/CT) and stereotactic OR equipment
+
+NOT COVERED SERVICES - NEUROLOGY/NEUROSURGERY:
+- Electric nerve stimulation for motor function disorders (MS): NOT COVERED (160.2)
+- Electrotherapy for facial nerve palsy (Bell Palsy): NOT COVERED (160.15)
+- Vertebral Axial Decompression (VAX-D): NOT COVERED (160.16)
+- Transfer factor for multiple sclerosis: NOT COVERED (160.20)
+- Sensory nerve conduction threshold tests (sNCT): NOT COVERED (160.23)
+- Multiple Electroconvulsive Therapy (MECT): NOT COVERED (160.25)
+- Cavernous Nerves Electrical Stimulation with Penile Plethysmography: NOT COVERED (160.26)
+- TENS for chronic low back pain outside approved clinical study: NOT COVERED (160.27)
+
+FRAUD RULES:
+- FRAUD: DBS billed without FDA-approved device
+- FRAUD: DBS billed for non-idiopathic PD or Parkinson Plus syndromes
+- FRAUD: DBS billed for patient with cognitive impairment, dementia, or active psychosis
+- FRAUD: VNS billed for depression outside CMS-approved CED study
+- FRAUD: NMES/FES for SCI billed without completing required 32 PT sessions over 3 months
+- FRAUD: Non-covered procedures billed (VAX-D, MECT, sNCT, Bell Palsy electrotherapy)
+- FRAUD: DBS performed without multidisciplinary team involvement documented
+- FRAUD: Intracranial pressure monitoring billed without documented ICU-level necessity
+- FRAUD: CNS stimulator implanted without documented failure of other therapies first
+
+================================================================================
+SECTION 23: RHEUMATOLOGIST - Additional Rules from NCD Part 2
+Source: NCD Chapter 1, Part 2, Section 150
+================================================================================
+
+ALLOWED CONDITIONS (Diagnoses):
+- Nonunion long bone fractures (confirmed 6+ months without healing on serial X-rays)
+- Failed spinal fusion requiring osteogenic stimulator (9+ months after last surgery)
+- Congenital pseudarthroses
+- High-risk spinal fusion (3+ vertebrae) requiring osteogenic stimulator adjunct
+- Acute or subacute traumatic/non-traumatic musculoskeletal disorders of extremities
+  (for fluidized dry heat therapy)
+- Respiratory conditions (bronchitis, emphysema, asthma) for rib cage manipulation
+- Head/neck conditions (occipitocervical, temporomandibular) for manipulation
+- Osteoarthritis of the knee WITHOUT severe grading (Outerbridge Grade I or II only,
+  and with mechanical symptoms beyond pain alone)
+
+ALLOWED SERVICES:
+
+150.1 - Manipulation
+- Rib cage manipulation: COVERED only as part of respiratory treatment regimen
+- Head/neck manipulation (occipitocervical, temporomandibular): COVERED
+
+150.2 - Osteogenic Stimulator
+Electrical - COVERED for:
+- Nonunion long bone fractures (after 6+ months, confirmed by serial X-rays 90 days apart)
+- Failed spinal fusion (minimum 9 months after last surgery)
+- Congenital pseudarthroses
+- Adjunct to high-risk spinal fusion (3+ vertebrae)
+NOT COVERED: Skull, vertebrae, tumor-related nonunion fractures
+
+Ultrasonic - COVERED for:
+- Nonunion fractures confirmed by 2 sets of radiographs 90+ days apart
+- Also covered prior to surgical intervention (from April 2005)
+NOT COVERED: Fresh fractures, delayed unions
+
+150.5 - Diathermy: COVERED for medically indicated conditions, by physician only
+
+150.7 - Prolotherapy / Joint Sclerotherapy: NOT COVERED
+
+150.8 - Fluidized Therapy Dry Heat: COVERED for acute/subacute musculoskeletal
+disorders of extremities
+
+150.9 - Arthroscopic Lavage and Debridement for Osteoarthritic Knee
+NOT COVERED for:
+- Lavage alone for osteoarthritic knee
+- Debridement for knee pain only (no mechanical symptoms)
+- Debridement/lavage for severe OA (Outerbridge Grade III or IV)
+
+150.10 - Lumbar Artificial Disc Replacement (LADR)
+- NOT COVERED for Medicare beneficiaries over age 60
+
+150.11 - Thermal Intradiscal Procedures (IDET, IDTA, PIRFT, etc.)
+- NOT COVERED for treatment of low back pain
+
+150.12 - Collagen Meniscus Implant: NOT COVERED
+
+150.13 - Percutaneous Image-guided Lumbar Decompression (PILD)
+- COVERED only under CMS-approved CED clinical study
+- NOT COVERED outside approved clinical trial
+
+NOT COVERED SERVICES - RHEUMATOLOGIST (Additional from Part 2):
+- Prolotherapy / joint sclerotherapy / ligamentous injections: NOT COVERED (150.7)
+- Vitamin B12 injections for foot tendons/ligaments: NOT COVERED (150.6)
+- Arthroscopic lavage alone for osteoarthritic knee: NOT COVERED (150.9)
+- Arthroscopic debridement for knee pain only: NOT COVERED (150.9)
+- Arthroscopic debridement for severe OA (Outerbridge Grade III or IV): NOT COVERED (150.9)
+- Lumbar Artificial Disc Replacement (LADR) for patients over age 60: NOT COVERED (150.10)
+- Thermal Intradiscal Procedures (IDET, IDTA, PIRFT, etc.) for low back pain: NOT COVERED (150.11)
+- Collagen Meniscus Implant: NOT COVERED (150.12)
+- Percutaneous Image-guided Lumbar Decompression (PILD) outside clinical trial: NOT COVERED (150.13)
+
+FRAUD RULES:
+- FRAUD: Arthroscopic lavage/debridement billed for severe OA (Outerbridge Grade III/IV)
+- FRAUD: Arthroscopic debridement billed for knee pain only with no mechanical symptoms
+- FRAUD: Prolotherapy or joint sclerotherapy billed (explicitly non-covered)
+- FRAUD: Collagen meniscus implant billed (non-covered per CMS evidence review)
+- FRAUD: Thermal intradiscal procedures billed for low back pain (non-covered)
+- FRAUD: LADR billed for patients over age 60
+- FRAUD: Osteogenic stimulator billed without serial X-ray confirmation of nonunion
+- FRAUD: Osteogenic stimulator billed for fresh fractures or delayed unions (ultrasonic)
+- FRAUD: PILD billed outside approved CMS CED clinical study
+
+================================================================================
+END OF NCD PART 2 ADDITIONS
+================================================================================
+
+================================================================================
+NCD PART 3 ADDITIONS (Sections 170-190.34)
+================================================================================
+
+================================================================================
+SECTION 24: NUTRITIONIST
+Source: NCD Chapter 1, Part 3, Section 180.1 - Medical Nutrition Therapy (MNT)
+================================================================================
+
+ALLOWED CONDITIONS (Diagnoses):
+- Diabetes mellitus (Type 1 or Type 2) - primary covered indication for MNT
+- Renal disease (chronic kidney disease / CRD) - primary covered indication for MNT
+- Change in medical condition, diagnosis, or treatment regimen requiring MNT change
+  (physician must document and order additional hours)
+- If physician determines both MNT and Diabetes Self-Management Training (DSMT)
+  are medically necessary in same episode of care, both are covered
+
+ALLOWED SERVICES:
+- Medical Nutrition Therapy (MNT) sessions - initial year: 3 hours total
+- MNT sessions - subsequent years: 2 hours total per year
+- Additional MNT hours (beyond 3 or 2 hour limits) when physician orders and documents
+  a change in medical condition, diagnosis, or treatment regimen
+- MNT and DSMT can both be covered in same episode of care IF not provided on same
+  date of service
+- Dietitian/nutritionist may divide allowed hours across visits as clinically appropriate
+
+NOT COVERED SERVICES:
+- MNT for conditions other than diabetes or renal disease (at national level)
+- MNT billed exceeding hour limits without physician documentation of changed condition
+- MNT and DSMT billed on the same date of service
+- Enteral and Parenteral Nutritional Therapy: NCD retired (Jan 1, 2022);
+  coverage now at local MAC discretion
+
+FRAUD RULES:
+- FRAUD: MNT billed without diagnosis of diabetes or renal disease
+- FRAUD: More than 3 hours billed in initial year without physician order for additional hours
+- FRAUD: More than 2 hours billed in subsequent years without physician order for change
+- FRAUD: MNT and DSMT billed on the same date of service
+- FRAUD: MNT billed by non-registered dietitian/nutritionist
+- FRAUD: Excessive MNT sessions billed without documented medical necessity
+
+================================================================================
+SECTION 25: ALL SPECIALITIES - LABORATORY TESTS (NCD Part 3)
+Source: NCD Chapter 1, Part 3, Section 190
+================================================================================
+
+NOTE: This section defines nationally covered laboratory tests and their allowed
+indications. Billing labs outside these indications = potential fraud.
+
+================================================================================
+SECTION 25A: ENDOCRINOLOGIST - DIABETES & THYROID LAB RULES
+Source: NCD Part 3, Sections 190.20, 190.21, 190.22
+================================================================================
+
+ALLOWED CONDITIONS (Diagnoses):
+- Diabetes mellitus (Type 1, Type 2, gestational)
+- Impaired fasting glucose / pre-diabetes / insulin resistance
+- Hypoglycemia disorders (nesidioblastosis, insulinoma)
+- Hypothyroidism, hyperthyroidism, goiter, thyroid nodules, thyroid cancer
+- Metabolic disorders, hyperlipidemia, certain anemias, psychosis
+- Unexplained depression, cardiac arrhythmias, disorders of menstruation
+- Malnutrition, skin conditions, myalgias, alterations in consciousness
+
+ALLOWED SERVICES:
+
+190.20 - Blood Glucose Testing
+- COVERED for diabetes management, impaired fasting glucose, insulin resistance,
+  hypoglycemia disorders, catabolic/malnutrition states
+- COVERED for: tuberculosis, chronic infections, alcoholism, coronary artery disease
+  (women), unexplained skin conditions (pruritis, ulceration)
+- Stable non-hospitalized patients: up to 4 times annually (more if clinically justified)
+- Home monitoring by diabetic patients: encouraged and covered
+
+190.21 - Glycated Hemoglobin (HbA1c) / Glycated Protein (Fructosamine)
+- COVERED every 3 months for diabetes management (HbA1c)
+- COVERED every 1-2 months if diabetes regimen changed or intercurrent events
+- COVERED monthly for pregnant diabetic women (glycated protein)
+- HbA1c AND fructosamine on same day: only allowed at initial assay; then use one only
+
+190.22 - Thyroid Testing (TSH, T3, T4, Free T4)
+- COVERED for: hypothyroidism, hyperthyroidism, goiter, thyroid nodules, thyroid cancer
+- COVERED for: metabolic disorders, hyperlipidemia, certain anemias, unexplained
+  depression, cardiac arrhythmias, menstrual disorders, skin conditions, myalgias
+- COVERED: up to 2 times/year for clinically stable patients
+- MORE frequent testing covered if thyroid therapy altered or new symptoms appear
+
+FRAUD RULES - ENDOCRINOLOGIST (Lab):
+- FRAUD: HbA1c billed more than 4 times per year without documented justification
+- FRAUD: HbA1c AND fructosamine both billed on same day after initial assay
+- FRAUD: Blood glucose billed more than 4 times/year for stable non-hospitalized patient
+  without documented medical necessity
+- FRAUD: Thyroid tests billed more than 2 times/year for clinically stable patient
+- FRAUD: Thyroid or glucose testing billed as screening for asymptomatic patients
+  (screening is not covered under these NCDs)
+
+================================================================================
+SECTION 25B: NEPHROLOGIST - CRD PATIENT LAB RULES
+Source: NCD Part 3, Section 190.10
+================================================================================
+
+ALLOWED CONDITIONS (Diagnoses):
+- Chronic Renal Disease (CRD) / End Stage Renal Disease (ESRD) on dialysis
+- Hepatitis B surveillance for dialysis patients
+
+ALLOWED SERVICES (Routine Lab Schedule for CRD/Dialysis Patients):
+
+Per Dialysis Session:
+- Hematocrit or hemoglobin
+- Clotting time
+
+Per Week:
+- Prothrombin time (for patients on anticoagulant therapy)
+- Serum Creatinine
+- BUN (or 13 per quarter)
+
+Monthly:
+- CBC, Serum Calcium, Serum Chloride, Serum Potassium, Serum Bicarbonate,
+  Serum Phosphorous, Total Protein, Serum Albumin, Alkaline Phosphatase,
+  AST, SGOT, LDH
+
+Every 3 Months:
+- Serum Aluminum
+- Serum Ferritin
+
+Hepatitis B Surveillance (for dialysis patients):
+- HBsAg and Anti-HBs tested when patient first enters dialysis facility
+- Unvaccinated susceptible patients: HBsAg monthly, Anti-HBs semiannually
+- Vaccinated adequate responders: Anti-HBs annually only
+- See NCD 190.10 table for full surveillance schedule
+
+FRAUD RULES - NEPHROLOGIST (Lab):
+- FRAUD: Lab tests billed outside the frequency schedule above without medical justification
+- FRAUD: Non-routine tests billed without diagnosis-based justification
+- FRAUD: Hepatitis B tests billed at frequencies not consistent with NCD 190.10 table
+- FRAUD: Blood count billed outside ESRD rate without documented medical necessity
+
+================================================================================
+SECTION 25C: CARDIOLOGIST / GENERAL - COAGULATION & CARDIAC LAB RULES
+Source: NCD Part 3, Sections 190.11, 190.16, 190.17, 190.24
+================================================================================
+
+ALLOWED CONDITIONS (Diagnoses):
+- Mechanical heart valves, chronic atrial fibrillation, venous thromboembolism
+  (deep venous thrombosis, pulmonary embolism) on warfarin - for home PT/INR
+- Heparin therapy (for PTT monitoring)
+- Hemorrhage, thrombosis, hemophilia, DIC, liver disease, lupus, Von Willebrand disease
+- Heart failure due to systolic dysfunction, atrial fibrillation/flutter (for Digoxin assay)
+
+ALLOWED SERVICES:
+
+190.11 - Home PT/INR Monitoring
+- COVERED for: mechanical heart valves, chronic atrial fibrillation, venous
+  thromboembolism on warfarin
+- Requirements: anticoagulated for 3+ months prior, face-to-face education completed,
+  demonstrated correct device use, self-testing no more than once per week
+
+190.16 - Partial Thromboplastin Time (PTT)
+- COVERED for: monitoring unfractionated heparin therapy, hemorrhage/thrombosis
+  signs and symptoms, hemophilia, DIC, liver disease, lupus, Von Willebrand disease
+- NOT useful for routine warfarin monitoring
+
+190.17 - Prothrombin Time (PT / INR)
+- COVERED for: warfarin monitoring, bleeding/thrombosis signs and symptoms
+- Stable warfarin therapy: not necessary more than every 2-3 weeks
+- NOT covered: more frequently than weekly for ESRD patients without documented need
+
+190.24 - Digoxin Therapeutic Drug Assay
+- COVERED for: patients on digoxin with signs/symptoms of toxicity, impaired renal/
+  hepatic/thyroid function, pH/electrolyte abnormalities, unstable cardiovascular status
+- Reasonable: once yearly after steady state achieved
+- NOT appropriate for patients on digitoxin or treated with digoxin FAB antibody
+
+FRAUD RULES - CARDIOLOGY (Lab):
+- FRAUD: Home PT/INR billed without qualifying condition (mechanical valve, AFib, VTE)
+- FRAUD: Home PT/INR billed more than once per week
+- FRAUD: PT/INR billed more frequently than every 2-3 weeks for stable warfarin patients
+- FRAUD: PTT billed routinely alongside PT for warfarin patients (not needed together)
+- FRAUD: Digoxin assay billed without documented clinical indication
+- FRAUD: Digoxin assay billed more than once yearly for stable patients without change
+  in condition, medications, or renal function
+
+================================================================================
+SECTION 25D: GASTROENTEROLOGIST / GENERAL - GI LAB RULES
+Source: NCD Part 3, Sections 190.32, 190.33, 190.34
+================================================================================
+
+ALLOWED CONDITIONS (Diagnoses):
+- Known or suspected hepatobiliary disease, liver injury, viral hepatitis
+- Pancreatic and biliary ductal carcinoma (for CA 19-9)
+- Gastrointestinal blood loss, iron deficiency anemia, unexplained anemia
+- Signs/symptoms of GI bleeding (black/red stools, abdominal pain)
+- Inflammatory bowel disease, acid-peptic disease, Crohn's disease, ulcerative colitis
+- Colorectal carcinoma (for CEA, FOBT)
+
+ALLOWED SERVICES:
+
+190.32 - Gamma Glutamyl Transferase (GGT)
+- COVERED for: hepatobiliary disease, drug/alcohol-induced liver injury, viral hepatitis,
+  malignant neoplasms, diabetes mellitus, post-liver transplant monitoring
+- Used to differentiate elevated alkaline phosphatase source (bone vs liver)
+- Not to be repeated after normal result unless new indications present
+
+190.33 - Hepatitis Panel (HAAb IgM, HBcAb IgM, HBsAg, HCV Ab)
+- COVERED for: differential diagnosis in patient with symptoms of liver disease
+- COVERED before and after liver transplantation
+- Repeat panel: only if continued symptoms despite negative initial panel (after 2 weeks
+  to 2 months)
+- After diagnosis established: use individual tests only, not full panel
+
+190.34 - Fecal Occult Blood Test (FOBT)
+- COVERED for: evaluating known/suspected alimentary tract conditions causing bleeding,
+  unexpected anemia, abnormal signs/symptoms with suspected blood loss,
+  black or red-tinged stools
+- FOBT reported once for up to 3 separate specimens
+- Patients on NSAIDs with GI bleeding history: no more than once every 3 months
+
+190.30 - CA 19-9 (Tumor Marker)
+- COVERED for: monitoring established diagnosis of pancreatic or biliary ductal carcinoma
+- NOT covered for: diagnosing pancreatic/biliary cancer
+- NOT covered for: evaluation of signs/symptoms suggestive of malignancy
+
+FRAUD RULES - GASTROENTEROLOGY (Lab):
+- FRAUD: Full hepatitis panel billed after diagnosis already established (use individual tests)
+- FRAUD: CA 19-9 billed for cancer diagnosis or symptom evaluation (not covered)
+- FRAUD: FOBT billed more than once per encounter (one FOBT = up to 3 specimens)
+- FRAUD: FOBT billed more than once every 3 months for NSAID patients
+- FRAUD: GGT billed repeatedly after normal result without new clinical indication
+
+================================================================================
+SECTION 25E: OB/GYNE - GYNECOLOGIC & ONCOLOGY LAB RULES
+Source: NCD Part 3, Sections 190.2, 190.27, 190.28, 190.29
+================================================================================
+
+ALLOWED CONDITIONS (Diagnoses):
+- Previous cancer of cervix, uterus, or vagina (for diagnostic Pap smear)
+- Previous abnormal Pap smear, abnormal vaginal/cervical/uterine findings
+- Significant gynecologic complaint or signs/symptoms
+- Epithelial ovarian carcinoma, fallopian tube, endometrial, endocervical carcinomas,
+  malignant mesothelioma, primary peritoneal carcinoma (for CA 125)
+- Breast cancer (for CA 15-3 / CA 27.29)
+- Germ cell neoplasms of ovary, testis, retroperitoneum, CNS (for hCG)
+- Pregnant patients with vaginal bleeding, hypertension, suspected fetal loss (for hCG)
+
+ALLOWED SERVICES:
+
+190.2 - Diagnostic Pap Smear
+- COVERED when ordered by physician for: previous cervical/uterine/vaginal cancer,
+  previous abnormal Pap, abnormal gynecologic findings, significant gynecologic
+  complaint, signs/symptoms suggesting gynecologic disorder
+
+190.27 - Human Chorionic Gonadotropin (hCG)
+- COVERED for: germ cell neoplasm monitoring, pregnant patients with bleeding/
+  hypertension/suspected fetal loss
+- Not more than once per month for diagnostic purposes
+- Qualitative hCG NOT appropriate for managing known/suspected germ cell neoplasms
+
+190.28 - CA 125 (Tumor Antigen)
+- COVERED for: pre-operative baseline in women with suspicious pelvic mass,
+  post-treatment monitoring of ovarian carcinoma, surveillance after treatment
+- Surveillance schedule: every 3 months x 2 years, every 6 months x 3 years, then yearly
+- NOT covered for: differential diagnosis of pelvic mass
+- NOT covered for: evaluation of signs/symptoms suggestive of malignancy
+
+190.29 - CA 15-3 / CA 27.29 (Breast Cancer Markers)
+- COVERED for: management and monitoring of patients with established breast cancer
+- Use consistently either CA 15-3 OR CA 27.29, not both
+- NOT covered for: evaluation of signs/symptoms suggestive of malignancy
+
+FRAUD RULES - OB/GYNE (Lab):
+- FRAUD: CA 125 billed for differential diagnosis of pelvic mass
+- FRAUD: CA 125 billed more frequently than every 3 months during surveillance
+- FRAUD: CA 15-3 AND CA 27.29 both billed for same patient (redundant, use one only)
+- FRAUD: hCG billed more than once per month for diagnostic purposes
+- FRAUD: Qualitative hCG billed for germ cell neoplasm management
+- FRAUD: Diagnostic Pap smear billed without any of the listed qualifying conditions
+
+================================================================================
+SECTION 25F: ALL SPECIALITIES - GENERAL LAB RULES (CBC, LIPIDS, IRON)
+Source: NCD Part 3, Sections 190.15, 190.18, 190.19, 190.23
+================================================================================
+
+ALLOWED CONDITIONS (Diagnoses):
+
+190.15 - Blood Counts (CBC / Hemogram)
+- COVERED for: anemia, leukemia, polycythemia, thrombocytosis, thrombocytopenia,
+  inflammatory/infectious conditions, coagulopathies, neoplasms, toxic substance exposure
+- COVERED for monitoring treatments affecting blood/bone marrow
+- Asymptomatic patients with no hematological risk: screening only, NOT covered
+- Repeat CBC: not indicated unless abnormal results or change in clinical condition
+
+190.18 - Serum Iron Studies (Iron, TIBC, Ferritin, Transferrin)
+- COVERED for: iron deficiency anemia workup, iron overload (hemochromatosis),
+  chronic hepatitis, post-surgical blood loss, malabsorption, malnutrition
+- Monitoring iron therapy response: covered
+- TIBC and transferrin: not both necessary at same time (TIBC is indirect transferrin measure)
+- Iron/TIBC AND ferritin: not both necessary on initial testing (order one first)
+
+190.19 - Collagen Crosslinks (Bone Resorption Markers)
+- COVERED for: monitoring osteoporosis treatment (elevated bone resorption confirmed)
+- COVERED for: predicting response to antiresorptive therapy in postmenopausal women
+- COVERED for: Paget disease of bone treatment monitoring
+- Frequency: baseline x2 (separate days), repeat at 3 months, at 12 months, then annually
+- If bone resorption NOT elevated: repeat testing not medically necessary
+
+190.23 - Lipid Testing (Total Cholesterol, LDL, HDL, Triglycerides)
+- COVERED for: atherosclerotic cardiovascular disease, primary/secondary dyslipidemia,
+  nephrotic syndrome, pancreatitis, hepatic disease, thyroid disorders, diabetes mellitus
+- Monitoring anti-lipid therapy: up to 6 times in first year; yearly thereafter
+- Screening of asymptomatic individuals: NOT covered by Medicare (screening exclusion)
+
+FRAUD RULES - GENERAL LABS:
+- FRAUD: CBC billed for asymptomatic patients with no clinical indication (screening)
+- FRAUD: Lipid panel billed as screening for asymptomatic patients (explicitly not covered)
+- FRAUD: Both TIBC and transferrin ordered simultaneously (redundant)
+- FRAUD: Both iron/TIBC and ferritin ordered on initial test (one is sufficient first)
+- FRAUD: Collagen crosslinks billed more than annually after therapy stabilized
+- FRAUD: Lipid panel billed more than 6 times in first year of therapy without justification
+- FRAUD: Repeat CBC billed without documented change in condition or abnormal result
+
+================================================================================
+SECTION 25G: UROLOGIST - PROSTATE & UROLOGY LAB RULES
+Source: NCD Part 3, Sections 190.31, 190.12
+================================================================================
+
+ALLOWED CONDITIONS (Diagnoses):
+- Lower urinary tract signs/symptoms: hematuria, slow urine stream, hesitancy,
+  urgency, frequency, nocturia, incontinence (for PSA)
+- Palpably abnormal prostate gland on exam (for PSA)
+- Established prostate cancer diagnosis - monitoring (for PSA)
+- Suspected urinary tract infection (for urine culture)
+- Suspected urosepsis, fever of unknown origin (for urine culture)
+- Abnormal urinalysis (hematuria, pyuria, bacteriuria, positive leukocyte esterase)
+- Pre-surgical genitourinary manipulation (renal transplant, stone removal, TURP)
+- Renal transplant recipients on immunosuppressive therapy (for urine culture)
+
+ALLOWED SERVICES:
+
+190.31 - Prostate Specific Antigen (PSA)
+- COVERED for: men with lower urinary tract signs/symptoms, palpably abnormal prostate,
+  lab/imaging suggesting malignant prostate disorder
+- COVERED for: monitoring established prostate cancer, detecting metastatic/persistent
+  disease after treatment
+- Frequency: generally once per year for lower urinary tract symptoms
+- In-situ carcinoma: once per year; if abnormal, may repeat once
+
+190.12 - Urine Culture, Bacterial
+- COVERED for: abnormal urinalysis suggesting UTI, clinical signs/symptoms of UTI,
+  suspected urosepsis, pre-surgical genitourinary procedures, immunosuppressed renal
+  transplant recipients
+- Test-of-cure: only if complicating co-existing urinary abnormality or failure to respond
+- CPT 87086: one time per encounter
+- Testing for asymptomatic bacteriuria: NOT covered (screening exclusion)
+
+FRAUD RULES - UROLOGIST (Lab):
+- FRAUD: PSA billed more than once per year for stable lower urinary tract symptoms
+- FRAUD: Urine culture billed for asymptomatic bacteriuria screening (not covered)
+- FRAUD: Urine culture (CPT 87086) billed more than once per encounter
+- FRAUD: Test-of-cure urine culture billed for uncomplicated UTI without complicating factors
+- FRAUD: PSA billed without documented urinary symptoms or clinical indication
+
+================================================================================
+SECTION 25H: INFECTIOUS DISEASES - HIV & IMMUNOLOGY LAB RULES
+Source: NCD Part 3, Sections 190.8, 190.9, 190.13, 190.14
+================================================================================
+
+ALLOWED CONDITIONS (Diagnoses):
+- Confirmed HIV infection (for viral load monitoring)
+- Symptomatic patients with AIDS-defining opportunistic infections, AIDS-associated
+  neoplasms, AIDS-associated neurologic disorders (for HIV diagnostic testing)
+- Acute retroviral syndrome (fever, malaise, lymphadenopathy, rash)
+- Documented exposure to blood/body fluids capable of transmitting HIV
+- Documented STD, hepatitis B or C infection (significant HIV exposure risk)
+- Immunodeficiency diseases (for lymphocyte mitogen response assay)
+
+ALLOWED SERVICES:
+
+190.9 - AIDS Serologic Testing (ELISA, Western Blot)
+- COVERED for symptomatic patients with clinical findings suggesting HIV
+- NOT covered as screening for asymptomatic persons
+- Western blot: only after TWO ELISA tests on same specimen are both positive
+
+190.13 - HIV Testing - Prognosis/Monitoring (Viral Load / RNA Quantification)
+- COVERED for: baseline in confirmed HIV patients, periodic monitoring of disease
+  progression, monitoring response to antiretroviral therapy
+- Baseline: 2 specimens within 2-week period
+- Frequency: per current CDC guidelines for antiretroviral therapy monitoring
+- NOT appropriate as diagnostic test (use serologic testing for diagnosis)
+
+190.14 - HIV Testing - Diagnosis
+- COVERED when strong clinical suspicion supported by AIDS-defining infection,
+  AIDS-associated neoplasm, AIDS neurologic disorder, unexplained immune deficiency,
+  documented HIV exposure, or signs of acute retroviral syndrome
+- Western blot: only after initial EIA is repeatedly positive or equivocal
+- If initial serologic tests confirm HIV: repeat testing not indicated
+- If tests negative and no indication for RNA detection: retest in 3-6 months
+
+190.8 - Lymphocyte Mitogen Response Assay
+- COVERED for: assessing lymphocytic function in diagnosed immunodeficiency diseases,
+  monitoring immunotherapy
+- NOT covered for: monitoring cancer treatment (experimental use)
+
+FRAUD RULES - INFECTIOUS DISEASES (Lab):
+- FRAUD: HIV serologic testing billed as screening for asymptomatic patients
+- FRAUD: Western blot billed without two prior positive ELISA tests on same specimen
+- FRAUD: HIV viral load billed as primary diagnostic tool (not appropriate for diagnosis)
+- FRAUD: Repeat HIV diagnostic testing after confirmed positive result
+- FRAUD: Lymphocyte mitogen assay billed for cancer treatment monitoring
+
+================================================================================
+END OF NCD PART 3 ADDITIONS
+================================================================================
+
+================================================================================
+NCD PART 4 ADDITIONS (Sections 200-310.1)
+================================================================================
+
+================================================================================
+SECTION 26: DERMATOLOGIST - SKIN DISEASE POLICIES
+Source: NCD Part 4, Sections 250.1, 250.3, 250.4, 250.5
+================================================================================
+
+ALLOWED CONDITIONS (Diagnoses):
+- Psoriasis (chronic, intractable, disabling) - for UV/PUVA therapy
+- Pemphigus Vulgaris (biopsy-proven) - for IVIg
+- Pemphigus Foliaceus (biopsy-proven) - for IVIg
+- Bullous Pemphigoid (biopsy-proven) - for IVIg
+- Mucous Membrane Pemphigoid / Cicatricial Pemphigoid (biopsy-proven) - for IVIg
+- Epidermolysis Bullosa Acquisita (biopsy-proven) - for IVIg
+- Actinic Keratosis (solar keratosis) - for destruction treatment
+- Facial Lipodystrophy Syndrome (LDS) in HIV/HAART patients with depression
+
+ALLOWED SERVICES:
+
+250.1 - Psoriasis Treatment:
+- Topical steroids or other topical drugs: COVERED (first-line)
+- Ultraviolet light therapy (actinotherapy): COVERED
+- Coal tar alone or with ultraviolet B light (Goeckerman treatment): COVERED
+- PUVA therapy (psoralen + ultraviolet A light): COVERED only after conventional
+  treatment has FAILED and psoriasis is intractable and disabling
+- PUVA duration: max 30 days unless documented improvement shown
+- Payment for PUVA limited to amounts paid for other photochemotherapy
+
+250.3 - IVIg for Autoimmune Blistering Diseases:
+- COVERED for biopsy-proven: Pemphigus Vulgaris, Pemphigus Foliaceus,
+  Bullous Pemphigoid, Cicatricial Pemphigoid, Epidermolysis Bullosa Acquisita
+- Only for patients who: (a) failed conventional therapy, OR
+  (b) conventional therapy is contraindicated, OR
+  (c) rapidly progressive disease requiring urgent response
+- IVIg must be SHORT-TERM only - NOT covered as maintenance therapy
+
+250.4 - Actinic Keratosis Treatment:
+- Destruction of actinic keratoses: COVERED without restrictions
+- No lesion or patient characteristic restrictions apply
+- Covered methods: cryosurgery, topical drug therapy, curettage, dermabrasion,
+  excision, chemical peels, laser therapy, photodynamic therapy (PDT)
+
+250.5 - Dermal Injections for Facial Lipodystrophy (HIV patients):
+- COVERED only for HIV-infected patients on HAART with facial lipodystrophy
+- LDS must be significant contributor to patient's depression
+- Only FDA-approved dermal fillers for this indication are covered
+
+NOT COVERED SERVICES:
+- PUVA as initial/first-line treatment without trial of conventional therapy
+- IVIg as long-term maintenance therapy for blistering diseases
+- Dermal fillers not FDA-approved for LDS treatment
+- Dermal fillers for any indication other than LDS in HIV patients with depression
+
+FRAUD RULES - DERMATOLOGIST:
+- FRAUD: PUVA billed without documented failure of conventional psoriasis treatment
+- FRAUD: PUVA billed for more than 30 days without documented improvement
+- FRAUD: IVIg for blistering diseases without biopsy-proven diagnosis
+- FRAUD: IVIg billed as long-term/maintenance therapy
+- FRAUD: IVIg billed without documented failure of conventional therapy
+- FRAUD: Dermal injection for LDS billed for non-HIV patient
+- FRAUD: Dermal injection for LDS billed without documented depression
+- FRAUD: Non-FDA-approved dermal filler billed for LDS treatment
+
+================================================================================
+SECTION 27: PREVENTION & SCREENING - UPDATED RULES
+Source: NCD Part 4, Sections 210.1-210.15
+================================================================================
+
+ALLOWED CONDITIONS (Diagnoses):
+- Prostate cancer screening (asymptomatic men ≥50) → Urologist
+- Cervical/vaginal cancer risk (women) → OB/Gyne
+- Colorectal cancer risk (asymptomatic, average risk ≥45) → Gastroenterologist
+- Diabetes risk factors present → Endocrinologist
+- High risk for HBV infection OR pregnant → Infectious Diseases / OB/Gyne
+- HIV risk factors OR age 15-65 → Infectious Diseases
+- Alcohol misuse (not dependence) → Psychiatrist / Medical Specialist
+- Depression screening (adults) → Psychiatrist
+- STI risk factors OR pregnant → OB/Gyne / Infectious Diseases
+- Obesity (BMI ≥30) → Medical Specialist / Nutritionist
+- High risk HCV OR born 1945-1965 → Infectious Diseases
+- Lung cancer risk (age 50-77, smoker ≥20 pack-years) → Pulmonologist
+- HIV high risk (for PrEP) → Infectious Diseases
+
+ALLOWED SERVICES:
+
+210.1 - Prostate Cancer Screening:
+- Digital rectal examination: once every 12 months, men ≥50
+- PSA blood test: once every 12 months, men ≥50
+- Minimum 11 months must pass between screenings
+
+210.2 - Pap Smear & Pelvic Examination:
+- Low risk women: once every 24 months
+- High risk women: more frequently than every 2 years (physician ordered)
+- High risk factors: early sexual activity (<16), multiple partners (≥5),
+  STD history, fewer than 3 negative paps in 7 years, DES exposure
+- Pelvic exam must include at least 7 of 11 specified elements
+
+210.2.1 - HPV Testing:
+- Once every 5 years for asymptomatic women aged 30-65
+- Must be done IN CONJUNCTION with Pap smear
+- FDA-approved tests only, CLIA compliant lab
+
+210.3 - Colorectal Cancer Screening:
+- FOBT (guaiac or immunoassay): once every 12 months, age ≥45
+- Cologuard (sDNA test): once every 3 years, age 45-85, asymptomatic,
+  average risk only (no personal/family history of polyps/CRC/IBD)
+- Blood-based biomarker test: once every 3 years, age 45-85, asymptomatic,
+  average risk, FDA-authorized, sensitivity ≥74%, specificity ≥90%
+- Screening CTC (CT colonography): NOT COVERED
+
+210.6 - HBV Screening:
+- High risk asymptomatic non-pregnant adults: covered (annually if continued risk)
+- Pregnant women: at first prenatal visit + at delivery if continuing risk factors
+- High risk = born in high-prevalence country (≥2%), HIV+, MSM, injection drug users,
+  household/sexual contacts of HBV infected persons
+
+210.7 - HIV Screening:
+- Age 15-65: annual voluntary screening (max 1 per year)
+- Outside 15-65: annual if increased risk
+- Pregnant: up to 3 screenings (at diagnosis, third trimester, at labor)
+- NOT covered: known HIV diagnosis, prior test within 1 year
+
+210.8 - Alcohol Misuse Screening:
+- Annual screening: covered
+- Up to 4 brief face-to-face counseling sessions per year if screens positive
+- Only for misuse (NOT dependence) patients
+- Must be in primary care setting
+
+210.9 - Depression Screening:
+- Annual screening: up to 15 minutes, covered
+- Must have staff-assisted depression care supports in place
+- Primary care setting only
+
+210.12 - Obesity Behavioral Therapy:
+- BMI ≥30 required
+- Week 1-4: weekly visits
+- Month 2-6: biweekly visits
+- Month 7-12: monthly visits (only if ≥3kg lost in first 6 months)
+
+210.13 - HCV Screening:
+- High risk (injection drug use history, blood transfusion before 1992):
+  annual screening if continued risk
+- Born 1945-1965: one-time screening only
+
+210.14 - Lung Cancer LDCT Screening:
+- Age 50-77, asymptomatic, ≥20 pack-year smoking history
+- Current smoker OR quit within last 15 years
+- Annual LDCT covered
+- Must have counseling/shared decision-making visit BEFORE first LDCT
+- Board-certified radiologist required
+- Standardized nodule reporting system required at facility
+
+210.15 - PrEP for HIV:
+- Up to 8 counseling visits per 12 months
+- Up to 8 HIV screening tests per 12 months
+- Single HBV screening covered
+- FDA-approved antiretroviral drugs only
+
+NOT COVERED SERVICES:
+- PSA/rectal exam more than once per 12 months
+- HPV testing without concurrent Pap smear
+- HPV testing more than once every 5 years
+- Cologuard more than once every 3 years
+- Cologuard for symptomatic patients or high-risk patients
+- Screening CTC (CT colonography) for colorectal cancer
+- HIV screening for known HIV-positive patients
+- Alcohol counseling more than 4 times per year
+- Alcohol counseling for dependent (not misuse) patients
+- Depression screening more than once per year
+- Obesity therapy month 7-12 without ≥3kg weight loss at 6 months
+- LDCT for age <50 or >77
+- LDCT without prior counseling visit
+
+FRAUD RULES - PREVENTION & SCREENING:
+- FRAUD: PSA or rectal exam billed more than once in 12 months
+- FRAUD: HPV test billed without same-visit Pap smear
+- FRAUD: HPV test billed more than once every 5 years
+- FRAUD: Cologuard billed more than once every 3 years
+- FRAUD: Cologuard billed for symptomatic or high-risk patient
+- FRAUD: HIV screening billed for patient with known HIV diagnosis
+- FRAUD: HIV screening billed within 11 months of prior HIV screening
+- FRAUD: Alcohol counseling billed more than 4 times per year
+- FRAUD: Obesity therapy month 7-12 billed without documented ≥3kg weight loss
+- FRAUD: LDCT billed without prior counseling/shared decision-making visit
+- FRAUD: LDCT billed for patient outside age 50-77
+- FRAUD: LDCT billed for non-smoker or quit >15 years ago
+
+================================================================================
+SECTION 28: RADIOLOGY - IMAGING POLICIES
+Source: NCD Part 4, Sections 220.1, 220.2, 220.4, 220.5, 220.6.1, 220.6.8,
+        220.6.9, 220.6.13, 220.6.17, 220.12
+================================================================================
+
+ALLOWED CONDITIONS (Diagnoses):
+- Known/suspected coronary artery disease → Cardiologist (PET, SPECT)
+- Ischemic cardiomyopathy, left ventricular dysfunction → Cardiologist (FDG PET)
+- Refractory seizures (pre-surgical) → Neurologist (FDG PET)
+- Fronto-temporal dementia vs Alzheimer's (differential) → Neurologist (FDG PET)
+- Cancer (most solid tumors, lymphoma, myeloma) → relevant speciality (FDG PET)
+- Breast symptoms/history OR age ≥35 for screening → OB/Gyne, Surgery-Plastic
+- Head/CNS/spine disorders → Neurologist, Neurosurgeon (MRI)
+- Disc disease → Orthopedic, Neurosurgeon (MRI)
+- Mediastinal/retroperitoneal masses → General Surgeon (MRI)
+- Obstructive sleep apnea → Pulmonologist (various imaging)
+- Stress fracture, infection, tumor, myocardial viability → SPECT
+
+ALLOWED SERVICES:
+
+220.1 - CT Scans:
+- COVERED if medically necessary for individual patient
+- Must be performed on FDA-approved, full-market-release equipment
+- No requirement to try other tests first (except in individual cases)
+- Mobile CT: same coverage rules as stationary
+
+220.2 - MRI:
+- Head, CNS, spine: COVERED (multiple sclerosis, neuroradiology)
+- Mediastinal/retroperitoneal masses, large vessel abnormalities: COVERED
+- Liver, urogenital, adrenal, pelvic organs: COVERED
+- Disc disease: COVERED without requiring prior radiological imaging
+- Pelvic/retroperitoneal neoplasms: COVERED
+- Bone neoplasm, aseptic necrosis: COVERED
+- Patients with metallic prostheses (hip infection): COVERED
+- MRA head/neck: COVERED for carotid, circle of Willis, cerebral arteries
+  (when surgery anticipated for tumor, aneurysm, vascular malformation)
+- MRA peripheral arteries (lower extremities): COVERED
+- MRA abdomen/pelvis (AAA repair, renal arteries): COVERED
+- MRA chest (pulmonary embolism if contrast contraindicated): COVERED
+
+220.2 - MRI Contraindications (NOT COVERED):
+- Cardiac pacemakers (EXCEPTION: FDA-approved MRI-conditional pacemakers)
+- Metallic clips on vascular aneurysms
+- Viable pregnancy
+- Cortical bone and calcifications: NOT covered
+
+220.4 - Mammograms:
+- Diagnostic mammography: COVERED for men or women with breast symptoms,
+  personal history of breast cancer, or biopsy-proven benign breast disease
+- Screening mammography: NOT covered under age 35
+- Age 35-39: one-time screening mammography only
+- Age ≥40: annual screening (minimum 11 months between screenings)
+- Must be minimum two-view exposure
+
+220.5 - Ultrasound:
+- COVERED: echocardiography, abdominal, renal, obstetric, pelvic mass,
+  thyroid, breast, vascular (arterial/venous flow), pregnancy monitoring,
+  placenta localization, amniocentesis guidance, biopsy guidance
+- NOT COVERED: B-scan for atherosclerotic narrowing of peripheral arteries
+
+220.6.1 - PET Heart Perfusion (Rb-82 or Ammonia N-13):
+- COVERED in place of SPECT (not in addition to)
+- OR after inconclusive SPECT result
+- For diagnosis/management of known/suspected coronary artery disease
+
+220.6.8 - FDG PET Myocardial Viability:
+- COVERED as primary/initial study before revascularization
+- OR after inconclusive SPECT
+- LIMITATION: If FDG PET inconclusive, follow-up SPECT NOT covered
+
+220.6.9 - FDG PET Refractory Seizures:
+- COVERED for pre-surgical evaluation only
+- To localize focus of refractory seizure activity
+- NOT covered for other indications
+
+220.6.13 - FDG PET Dementia:
+- COVERED for differential diagnosis of FTD vs Alzheimer's disease
+- Requirements: recent dementia diagnosis, ≥6 months cognitive decline,
+  comprehensive clinical evaluation done, experienced dementia physician,
+  prior SPECT/PET not already done for same indication
+- NOT covered: general dementia workup without FTD vs AD differential need
+
+220.6.17 - FDG PET Oncology:
+- COVERED: initial treatment strategy for most cancers (colorectal, esophagus,
+  head/neck, lymphoma, non-small cell lung, ovary, brain, small cell lung,
+  soft tissue sarcoma, pancreas, testes, thyroid, breast metastasis staging,
+  melanoma except regional lymph nodes, cervix except initial diagnosis)
+- COVERED: up to 3 subsequent treatment strategy scans after initial therapy
+- NOT COVERED: prostate cancer initial treatment strategy
+- NOT COVERED: breast cancer initial diagnosis/axillary node staging
+- NOT COVERED: melanoma regional lymph node initial staging
+
+220.12 - SPECT:
+- COVERED for: stress fracture, spondylosis, infection (discitis),
+  tumor (osteoid osteoma), myocardial viability, ischemic vs dilated cardiomyopathy
+- LIMITATION: SPECT NOT covered after inconclusive FDG PET for myocardial viability
+
+NOT COVERED SERVICES:
+- MRI of cortical bone and calcifications
+- MRI during viable pregnancy
+- Screening mammography under age 35
+- More than one screening mammography per year (age ≥40)
+- SPECT after inconclusive FDG PET (myocardial viability)
+- FDG PET for prostate cancer initial treatment strategy
+- Screening CT colonography for colorectal cancer
+- Thermography (any indication)
+
+FRAUD RULES - RADIOLOGY:
+- FRAUD: MRI billed for patient with non-MRI-conditional pacemaker
+- FRAUD: MRI billed for cortical bone or calcification imaging
+- FRAUD: Screening mammography billed for woman under age 35
+- FRAUD: Two screening mammograms billed within 11 months
+- FRAUD: PET heart perfusion billed in addition to (not instead of) SPECT
+- FRAUD: SPECT billed after inconclusive FDG PET for myocardial viability
+- FRAUD: FDG PET billed for prostate cancer initial staging
+- FRAUD: FDG PET for refractory seizures billed for non-presurgical evaluation
+- FRAUD: More than 3 subsequent FDG PET oncology scans billed without MAC approval
+- FRAUD: FDG PET for dementia without documented ≥6 months cognitive decline
+
+================================================================================
+SECTION 29: UROLOGIST - ADDITIONAL POLICIES
+Source: NCD Part 4, Sections 230.1, 230.2, 230.4, 230.8, 230.9, 230.18
+================================================================================
+
+ALLOWED CONDITIONS (Diagnoses):
+- Upper urinary tract kidney stones (renal/ureteral calculi)
+- Urological dysfunctions including bladder outlet obstruction
+- Sexual impotence (erectile dysfunction)
+- Stress urinary incontinence / urge urinary incontinence (after failed PME)
+- Clinically localized prostate cancer (T1-T3) for cryosurgery
+- Recurrent prostate cancer after radiation failure (T2B or below)
+- Urinary urge incontinence, urgency-frequency syndrome, urinary retention
+  (refractory to conventional therapy) for sacral nerve stimulation
+
+ALLOWED SERVICES:
+
+230.1 - Kidney Stone Treatment:
+- Extracorporeal Shock Wave Lithotripsy (ESWL): COVERED
+- Percutaneous lithotripsy (nephrolithotomy): COVERED
+- Transurethral ureteroscopic lithotripsy: COVERED
+- Traditional surgical nephrectomy/nephrotomy: COVERED
+
+230.2 - Uroflowmetric Evaluations:
+- COVERED for diagnosing urological dysfunctions and bladder outlet obstructions
+
+230.4 - Impotence Diagnosis and Treatment:
+- COVERED: diagnosis and treatment of sexual impotence
+- Surgical treatment (penile prosthesis implantation): COVERED
+- Non-surgical treatment (medical or psychotherapeutic): COVERED
+
+230.8 - Pelvic Floor Electrical Stimulator:
+- COVERED for stress and/or urge urinary incontinence
+- Patient must be cognitively intact
+- MUST have failed 4-week trial of pelvic muscle exercise (PME) training
+- Failed PME = no clinically significant improvement after 4-week ordered PME plan
+
+230.9 - Cryosurgery of Prostate:
+- Primary treatment: COVERED for clinically localized prostate cancer T1-T3
+- Salvage therapy after radiation failure: COVERED ONLY IF:
+  Stage T2B or below, AND Gleason score <9, AND PSA <8 ng/mL
+- NOT covered as salvage after failure of therapies OTHER than radiation
+
+230.18 - Sacral Nerve Stimulation:
+- COVERED for: urinary urge incontinence, urgency-frequency syndrome,
+  urinary retention
+- Patient must be refractory to conventional therapy (behavioral, pharmacologic,
+  surgical)
+- Patient must be appropriate surgical candidate (anesthesia possible)
+- EXCLUDED: stress incontinence, urinary obstruction, diabetes with peripheral
+  nerve involvement
+- Test stimulation required first: must show ≥50% improvement before permanent implant
+- Patient must demonstrate ability to record voiding diary
+
+NOT COVERED SERVICES:
+- Pelvic floor electrical stimulator without documented failed 4-week PME trial
+- Cryosurgery as salvage after non-radiation primary treatment failure
+- Cryosurgery salvage with Stage >T2B, OR Gleason ≥9, OR PSA ≥8 ng/mL
+- Sacral nerve stimulation without successful test stimulation
+- Sacral nerve stimulation for stress incontinence
+- Permanent sacral nerve implant without ≥50% improvement on test stimulation
+
+FRAUD RULES - UROLOGIST (Additional):
+- FRAUD: Pelvic floor stimulator billed without documented failed PME trial
+- FRAUD: Cryosurgery billed as salvage after chemotherapy/hormone failure
+  (only radiation failure qualifies)
+- FRAUD: Cryosurgery salvage billed with Gleason ≥9 or PSA ≥8 ng/mL
+- FRAUD: Permanent sacral nerve implant billed without prior test stimulation
+- FRAUD: Sacral nerve stimulation billed for stress incontinence patient
+- FRAUD: Sacral nerve stimulation billed without documented conventional therapy failure
+
+================================================================================
+SECTION 30: PULMONOLOGIST - ADDITIONAL POLICIES
+Source: NCD Part 4, Sections 240.1, 240.2, 240.4, 240.4.1, 240.9
+================================================================================
+
+ALLOWED CONDITIONS (Diagnoses):
+- Severe emphysema (bilateral, upper-lobe predominant) for LVRS
+- Chronic hypoxemia (PO2 ≤55 mmHg or SaO2 ≤88%) for home oxygen
+- Obstructive Sleep Apnea (AHI/RDI ≥15, or ≥5 with symptoms) for CPAP
+- Chronic respiratory failure due to COPD (PaCO2 ≥52 mmHg) for NIPPV
+
+ALLOWED SERVICES:
+
+240.1 - Lung Volume Reduction Surgery (LVRS):
+- COVERED for severe emphysema meeting ALL criteria:
+  FEV1 ≤45% predicted, TLC ≥100%, RV ≥150%, BMI ≤31.1 (men)/32.3 (women)
+  PCO2 ≤60 mmHg, PO2 ≥45 mmHg
+  6-min walk ≥140m post-rehabilitation
+  Non-smoker ≥4 months (cotinine ≤13.7 ng/mL)
+- Must have upper-lobe predominant emphysema OR non-upper-lobe with low exercise
+  capacity (≤25 watts women, ≤40 watts men)
+- Must be performed at Joint Commission certified LVRS facility
+- Pre-op program: 16-20 sessions over 6-10 weeks required
+- Post-op program: 6-10 sessions within 8-9 weeks required
+- NOT COVERED: FEV1 <20%, homogeneous emphysema on CT, DLCO <20%
+- NOT COVERED: non-upper-lobe emphysema with HIGH exercise capacity
+
+240.2 - Home Oxygen:
+- Group I: PO2 ≤55 mmHg OR SaO2 ≤88% at rest: COVERED
+- Group II: PO2 56-59 mmHg with CHF/pulmonary hypertension/erythrocythemia: COVERED
+- NOT COVERED: angina without hypoxemia, breathlessness without hypoxemia,
+  severe peripheral vascular disease without desaturation, terminal illness
+  not affecting breathing
+
+240.4 - CPAP for OSA:
+- AHI/RDI ≥15: COVERED
+- AHI/RDI 5-14 with documented excessive daytime sleepiness, cognitive impairment,
+  mood disorder, insomnia, hypertension, ischemic heart disease, or stroke: COVERED
+- Initial 12-week trial period
+- Requires prior sleep study (PSG Type I, or HST Type II/III/IV)
+- Patient education required before use
+
+240.4.1 - Sleep Testing for OSA:
+- Type I PSG (attended, sleep lab): COVERED
+- Type II HST (≥7 channels, unattended): COVERED
+- Type III HST (≥4 channels including airflow+respiratory+HR+O2): COVERED
+- Type IV HST (≥3 channels including airflow): COVERED
+
+240.9 - NIPPV/Home Mechanical Ventilator for COPD:
+- RAD with backup rate: PaCO2 ≥52 mmHg, sleep apnea not predominant cause,
+  stable COPD or post-hospitalization hypercapnia
+- By 6 months: must use ≥4 hrs/day on ≥70% of days AND show PaCO2 improvement
+- HMV: PaCO2 ≥52 mmHg PLUS needs FiO2 ≥36%, OR >8 hrs ventilatory support,
+  OR requires alarms/battery
+
+NOT COVERED SERVICES:
+- LVRS for FEV1 <20% predicted
+- LVRS for homogeneous emphysema distribution on CT
+- LVRS for non-upper-lobe emphysema with high exercise capacity
+- Home oxygen for angina without hypoxemia
+- CPAP without prior sleep study
+- NIPPV continued if patient not using ≥4 hrs/day on ≥70% of days by 6 months
+
+FRAUD RULES - PULMONOLOGIST (Additional):
+- FRAUD: LVRS billed without documented pre-op rehabilitation program
+- FRAUD: LVRS billed at non-certified facility
+- FRAUD: LVRS billed for FEV1 <20% or homogeneous emphysema (excluded high-risk group)
+- FRAUD: Home oxygen billed for angina pectoris without documented hypoxemia
+- FRAUD: CPAP billed without prior sleep study documentation
+- FRAUD: CPAP billed for AHI 5-14 without documented qualifying comorbidity
+- FRAUD: NIPPV continued without documented ≥4 hrs/day usage compliance
+
+================================================================================
+SECTION 31: TRANSPLANTATION POLICIES
+Source: NCD Part 4, Sections 260.1, 260.2, 260.3, 260.5, 260.9
+================================================================================
+
+ALLOWED CONDITIONS (Diagnoses):
+- End-stage liver disease (non-malignant) → General Surgeon / adult liver transplant
+- Hepatocellular carcinoma (≤5cm, no macrovascular/extrahepatic spread) → liver Tx
+- Biliary atresia or end-stage liver disease in children → Pediatric Surgeon
+- Type I diabetes (labile, failed 12-month endocrinologist management) → pancreas Tx
+- Intestinal failure (failed TPN) → General Surgeon
+- End-stage heart disease → Surgery-Cardiac
+
+ALLOWED SERVICES:
+
+260.1 - Adult Liver Transplant:
+- End-stage liver disease (all causes except non-covered malignancies): COVERED
+  at CMS-approved facilities
+- Hepatocellular carcinoma: COVERED if tumor ≤5cm, no macrovascular involvement,
+  no extrahepatic spread, CMS-approved facility
+- Follow-up care and re-transplantation: COVERED
+- Immunosuppressive drugs: COVERED
+
+260.2 - Pediatric Liver Transplant:
+- Children under 18 with biliary atresia or end-stage liver disease: COVERED
+- NOT COVERED: malignancy extending beyond liver margins, persistent viremia
+- Must be performed at approved pediatric hospital
+
+260.3 - Pancreas Transplant:
+- Simultaneous with or after kidney transplant: COVERED
+- Pancreas alone (PA): COVERED only if:
+  Type I diabetes (beta cell autoantibody positive OR C-peptide ≤110% lower normal)
+  AND labile DM with recurrent severe metabolic complications requiring hospitalization
+  AND failed 12-month intensive endocrinologist management
+  AND performed at Medicare-approved kidney transplant facility
+
+260.5 - Intestinal/Multi-Visceral Transplant:
+- COVERED for failed TPN patients at approved centers (≥10 transplants/year,
+  ≥65% 1-year survival)
+- TPN failure = liver failure, central vein thrombosis, frequent sepsis,
+  or severe dehydration despite IV fluids
+
+260.9 - Heart Transplant:
+- COVERED at CMS-approved facilities
+- Ventricular assist devices (VAD): COVERED
+- Follow-up care: COVERED
+
+NOT COVERED SERVICES:
+- Liver transplant for malignancies other than hepatocellular carcinoma
+  (unless MAC determination for CCA, NET, HAE)
+- Pediatric liver transplant with malignancy beyond liver or persistent viremia
+- Pancreas alone transplant without documented failed 12-month endocrinologist care
+- Islet cell transplantation outside clinical trial context
+- Intestinal transplant at non-approved centers
+
+FRAUD RULES - TRANSPLANTATION:
+- FRAUD: Liver transplant billed for hepatocellular carcinoma >5cm
+- FRAUD: Liver transplant billed for tumor with extrahepatic spread
+- FRAUD: Pancreas alone transplant billed without 12-month endocrinologist
+  management failure documentation
+- FRAUD: Pancreas alone transplant billed without C-peptide or autoantibody criteria
+- FRAUD: Intestinal transplant billed at facility with <10 transplants/year
+- FRAUD: Islet cell transplant billed outside approved clinical trial
+
+================================================================================
+SECTION 32: WOUND TREATMENT POLICIES
+Source: NCD Part 4, Sections 270.1, 270.3
+================================================================================
+
+ALLOWED CONDITIONS (Diagnoses):
+- Stage III or IV pressure ulcers (chronic, >30 days)
+- Arterial ulcers (chronic, >30 days, failed standard care)
+- Diabetic ulcers (chronic, >30 days) → General Surgeon / Endocrinologist
+- Venous stasis ulcers (chronic, >30 days)
+- Chronic non-healing diabetic wounds for autologous PRP
+
+ALLOWED SERVICES:
+
+270.1 - Electrical Stimulation (ES) and Electromagnetic Therapy:
+- COVERED for: Stage III/IV pressure ulcers, arterial ulcers,
+  diabetic ulcers, venous stasis ulcers
+- ONLY after standard wound care tried for ≥30 days with no measurable improvement
+- Standard care must include: nutritional optimization, debridement,
+  moist wound dressings, infection treatment, repositioning (pressure ulcers),
+  glucose control (diabetic), compression (venous), circulation (arterial)
+- Must show measurable healing signs within each 30-day treatment period
+- Must be performed by physician, physical therapist, or incident to physician
+- Wound must be evaluated monthly by treating physician
+
+270.3 - Autologous PRP (Platelet-Rich Plasma):
+- COVERED for chronic non-healing DIABETIC wounds only
+- Duration: up to 20 weeks coverage
+- Device must be FDA-cleared for exuding cutaneous wound management
+- Coverage beyond 20 weeks: MAC discretion
+
+NOT COVERED SERVICES:
+- ES/Electromagnetic therapy as initial treatment (must try standard care first)
+- ES/Electromagnetic therapy if no healing signs within any 30-day period
+- Unsupervised ES/electromagnetic therapy
+- PRP for acute surgical wounds applied to closed incision
+- PRP for dehiscent wounds
+- Non-autologous/homologous PDGF for chronic wounds
+- Becaplermin (non-autologous growth factor)
+- Infrared therapy devices for diabetic neuropathy or wounds (non-covered)
+- Noncontact Normothermic Wound Therapy (NNWT): non-covered
+
+FRAUD RULES - WOUND TREATMENT:
+- FRAUD: ES/electromagnetic therapy billed without 30-day standard care trial
+- FRAUD: ES/electromagnetic therapy continued without documented healing signs
+  in each 30-day period
+- FRAUD: Unsupervised wound ES billed as physician/therapist service
+- FRAUD: PRP billed for acute surgical wounds or dehiscent wounds
+- FRAUD: PRP billed for non-diabetic chronic wounds (without MAC approval)
+- FRAUD: PRP billed beyond 20 weeks without MAC authorization
+- FRAUD: Infrared therapy billed for diabetic neuropathy or wounds
+
+================================================================================
+SECTION 33: MEDICAL SUPPLIES & DME POLICIES
+Source: NCD Part 4, Sections 280.3, 280.4, 280.6, 280.7, 280.8, 280.14
+================================================================================
+
+ALLOWED CONDITIONS (Diagnoses):
+- Mobility deficit impairing daily activities → Physical Med & Rehab / Orthopedic
+- Severe arthritis (hip/knee) or neuromuscular disease → Seat lift
+- Lymphedema (after 4-week conservative trial) → Pneumatic compression
+- Chronic venous insufficiency with venous stasis ulcers (after 6-month trial)
+- Positioning needs OR special attachment needs → Hospital bed
+- Stage III/IV pressure sores, bedridden → Air-fluidized bed
+- Type I diabetes (CSII pump criteria) → Endocrinologist
+- Severe spasticity unresponsive to oral medications → Neurologist
+- Severe chronic intractable pain (malignant/non-malignant) → relevant speciality
+- Primary hepatocellular carcinoma or colorectal liver metastases → General Surgeon
+
+ALLOWED SERVICES:
+
+280.3 - Mobility Assistive Equipment (MAE):
+- Canes, crutches, walkers: COVERED if mobility deficit impairing daily activities
+- Manual wheelchairs: COVERED if sufficient upper extremity function
+- Power wheelchairs: COVERED if manual wheelchair insufficient
+- Scooters/POVs: COVERED if sufficient strength/postural stability
+- Clinical algorithmic assessment required
+
+280.4 - Seat Lift:
+- COVERED for severe arthritis (hip/knee) OR muscular dystrophy/neuromuscular disease
+- Must show therapeutic benefit, part of physician treatment plan
+- Smooth operation type only (NOT spring-release/catapult type)
+
+280.6 - Pneumatic Compression Devices:
+- Lymphedema: COVERED after 4-week conservative trial (compression bandage,
+  exercise, elevation) with no significant improvement
+- CVI with venous stasis ulcers: COVERED after 6-month conservative trial failure
+- Physician oversight required (evaluation, prescription, monitoring)
+
+280.7 - Hospital Beds:
+- COVERED if patient needs positioning OR special attachments not feasible in
+  ordinary bed
+- Variable height: severe arthritis, cardiac conditions, spinal cord injuries,
+  stroke, amputees
+
+280.8 - Air-Fluidized Bed:
+- Stage III or IV pressure sore required
+- Patient must be bedridden/chair bound
+- Without bed, patient would require institutionalization
+- Must have failed ≥1 month conservative treatment
+- Trained adult caregiver required at home
+- Monthly physician re-evaluation and recertification required
+- NOT COVERED: coexisting pulmonary disease, wet soaks without occlusive covering,
+  caregiver unable to provide care, structural support insufficient
+
+280.14 - Infusion Pumps:
+External pumps COVERED for:
+- Iron poisoning (deferoxamine)
+- Thromboembolic disease/pulmonary embolism (heparin, institutional only)
+- Liver cancer chemo (primary hepatocellular or colorectal unresectable)
+- Intractable cancer pain (morphine)
+- CSII (insulin pump) for Type I diabetes meeting strict criteria:
+  C-peptide ≤110% lower normal OR beta cell autoantibody positive
+  PLUS Criterion A (≥6 months multiple daily injections, HbA1c >7% or other) OR
+  Criterion B (prior pump user before Medicare enrollment)
+
+Implantable pumps COVERED for:
+- Liver cancer (hepatic artery 5-FUdR, unresectable)
+- Severe spasticity (intrathecal baclofen, after failed oral medications)
+- Chronic intractable pain (intrathecal/epidural opioids, life expectancy ≥3 months)
+
+NOT COVERED SERVICES:
+- Implantable insulin pump for diabetes
+- Implantable heparin pump for thromboembolic disease
+- Vancomycin via external infusion pump (DME benefit)
+- Air-fluidized bed with coexisting pulmonary disease
+- Seat lift (spring-release/catapult type)
+- MAE without documented clinical assessment of mobility deficit
+
+FRAUD RULES - MEDICAL SUPPLIES & DME:
+- FRAUD: Pneumatic compression for lymphedema without documented 4-week
+  conservative trial failure
+- FRAUD: Pneumatic compression for CVI without documented 6-month trial failure
+- FRAUD: Air-fluidized bed billed without documented 1-month conservative
+  treatment failure
+- FRAUD: Air-fluidized bed billed for patient with coexisting pulmonary disease
+- FRAUD: Air-fluidized bed billed without monthly physician recertification
+- FRAUD: CSII pump billed without documented C-peptide criteria or autoantibody
+- FRAUD: CSII pump billed without ≥3-month physician follow-up visits
+- FRAUD: Implantable pump for diabetes (insulin) - never covered
+- FRAUD: Implantable baclofen pump without documented 6-week oral medication trial
+- FRAUD: Power wheelchair billed without clinical algorithmic assessment
+
+================================================================================
+SECTION 34: NEPHROLOGIST - LEVOCARNITINE POLICY
+Source: NCD Part 4, Section 230.19
+================================================================================
+
+ALLOWED CONDITIONS (Diagnoses):
+- Carnitine deficiency in ESRD patients on dialysis
+- EPO-resistant anemia (hematocrit <30% despite standard EPO + iron)
+- Intradialytic hypotension (≥2 episodes in 30 days despite standard measures)
+
+ALLOWED SERVICES:
+
+230.19 - Levocarnitine for ESRD:
+- COVERED for: carnitine deficiency (plasma free carnitine <40 micromol/L)
+  WITH EPO-resistant anemia OR intradialytic hypotension
+- Patient must have been on dialysis minimum 3 months
+- Continued coverage: requires documented improvement within 6 months
+- All other levocarnitine indications in ESRD: NOT COVERED
+
+NOT COVERED SERVICES:
+- Levocarnitine for ESRD patients on dialysis <3 months
+- Levocarnitine without documented plasma carnitine <40 micromol/L
+- Levocarnitine without EPO-resistant anemia or intradialytic hypotension
+- Continued levocarnitine without improvement within 6 months
+
+FRAUD RULES - NEPHROLOGIST (Levocarnitine):
+- FRAUD: Levocarnitine billed for ESRD patient on dialysis <3 months
+- FRAUD: Levocarnitine billed without documented carnitine level <40 micromol/L
+- FRAUD: Levocarnitine continued beyond 6 months without documented improvement
+- FRAUD: Levocarnitine billed for indication other than anemia or hypotension
+
+================================================================================
+SECTION 35: CLINICAL TRIALS - ALL SPECIALITIES
+Source: NCD Part 4, Section 310.1
+================================================================================
+
+310.1 - Routine Costs in Clinical Trials:
+- Routine costs of qualifying clinical trials: COVERED
+- Items/services used to diagnose/treat complications from trial participation: COVERED
+- Conventional care items otherwise covered by Medicare: COVERED
+- Items required solely for provision of investigational item: COVERED
+- Monitoring of investigational item effects: COVERED
+- Treatment of complications from investigational items: COVERED
+
+NOT COVERED in Clinical Trials:
+- The investigational item/service itself (unless otherwise covered)
+- Items provided solely for data collection not used in patient management
+- Items customarily provided free by research sponsors
+
+FRAUD RULES - CLINICAL TRIALS:
+- FRAUD: Billing investigational item itself as routine cost
+- FRAUD: Billing data-collection-only items (e.g., extra CT scans not clinically needed)
+- FRAUD: Billing items provided free by research sponsor
+
+================================================================================
+END OF NCD PART 4 ADDITIONS
+================================================================================
+
+================================================================================
+MASTER FRAUD DETECTION RULES - UPDATED (All Specialities)
+================================================================================
+
+RULE M1 - FREQUENCY VIOLATION:
+Any service billed more frequently than policy-specified limit is fraud.
+Examples: PSA >1/year, HPV >1/5years, Cologuard >1/3years, mammogram >1/year
+
+RULE M2 - PREREQUISITE NOT MET:
+Any service billed without required prior treatment trial is fraud.
+Examples: PUVA without conventional psoriasis tx, CPAP without sleep study,
+pelvic stimulator without PME trial, ES without 30-day standard wound care
+
+RULE M3 - WRONG PATIENT CRITERIA:
+Service billed for patient not meeting clinical criteria is fraud.
+Examples: LVRS with FEV1 <20%, pancreas Tx without Type I DM criteria,
+levocarnitine without carnitine deficiency, PRP for acute wounds
+
+RULE M4 - NON-COVERED SERVICE:
+Billing explicitly non-covered service is fraud.
+Examples: implantable insulin pump, screening CTC, thermography,
+NNWT, infrared therapy for wounds, SPECT after inconclusive FDG PET
+
+RULE M5 - FACILITY NOT APPROVED:
+Procedure performed at non-approved facility billed as covered is fraud.
+Examples: LVRS at non-Joint-Commission certified facility,
+intestinal transplant at <10 transplants/year center
+
+RULE M6 - MISSING DOCUMENTATION:
+Service billed without required documented evidence is fraud.
+Examples: IVIg without biopsy-proven diagnosis, cryosurgery salvage
+without radiation failure documentation, PRP beyond 20 weeks without MAC auth
+
+================================================================================
+SECTION 36: GENERAL PHYSICIAN / ANY LICENSED PHYSICIAN
+Source: Medicare Benefit Policy Manual - General Practice Guidelines
+Note: These services are permitted for ANY licensed physician regardless of
+specialty. All 35 specialties in this system inherit these permissions.
+================================================================================
+
+ALLOWED CONDITIONS (Diagnoses):
+- Fever / Pyrexia of unknown origin
+- General weakness / Fatigue
+- Headache (non-neurological, screening)
+- Common cold / Upper respiratory tract infection (URTI)
+- Influenza / Flu
+- Nausea / Vomiting / Diarrhea (general)
+- Dehydration
+- Hypertension (screening and basic monitoring)
+- Diabetes mellitus (basic monitoring)
+- Anemia (screening)
+- Nutritional deficiency (Vitamin D, B12, Iron)
+- General pain / Body ache
+- Weight loss / Weight gain (unexplained)
+- Pre-operative workup (any surgery)
+- Routine health screening / Annual checkup
+- Infection (general, unspecified)
+- Inflammatory condition (general)
+- Thyroid disorder (basic screening)
+
+ALLOWED SERVICES:
+- Complete Blood Count (CBC)
+- Basic Metabolic Panel (BMP)
+- Comprehensive Metabolic Panel (CMP)
+- Erythrocyte Sedimentation Rate (ESR)
+- C-Reactive Protein (CRP)
+- Blood Glucose (Fasting / Random)
+- HbA1c (Glycated Hemoglobin)
+- Urine Routine Examination (Urine R/E)
+- Urine Culture / Sensitivity (Urine C/S)
+- Liver Function Tests (LFT)
+- Kidney Function Tests (KFT) / Renal Profile
+- Serum Electrolytes (Sodium, Potassium, Chloride)
+- Serum Creatinine
+- Blood Urea Nitrogen (BUN)
+- Uric Acid
+- Thyroid Stimulating Hormone (TSH)
+- Vitamin D (25-OH)
+- Vitamin B12
+- Iron Studies (Serum Iron, TIBC, Ferritin)
+- Lipid Profile (Cholesterol, Triglycerides, HDL, LDL)
+- Chest X-ray 1 View (basic screening)
+- ECG 12 Lead (basic screening, pre-operative)
+- Blood Pressure Monitoring
+- Temperature / Pulse / Oxygen Saturation (vital signs)
+- General Physician Consultation
+- Follow-up Consultation
+- Paracetamol / Antipyretics (fever management)
+- Oral Rehydration Therapy (ORT)
+- IV Fluids (basic, for dehydration)
+- Blood Culture (for fever workup)
+- Widal Test (typhoid screening)
+- Dengue NS1 / IgG / IgM
+- Malaria Parasite Test (MP Test)
+- Hepatitis B Surface Antigen (HBsAg) - screening
+- Hepatitis C Antibody (Anti-HCV) - screening
+- HIV screening (with consent)
+- Random Blood Sugar (RBS)
+- Fasting Blood Sugar (FBS)
+- Peripheral Blood Film (PBF)
+- Prothrombin Time (PT) / INR - pre-operative
+- APTT - pre-operative
+
+FRAUD RULES:
+- FRAUD: Specialty-specific advanced procedure billed under general physician code
+- FRAUD: General physician services billed without any documented clinical indication
+- FRAUD: Routine screening tests billed as diagnostic workup without symptoms
+- FRAUD: Pre-operative tests billed without documented upcoming surgical procedure
+- FRAUD: Duplicate billing for same general physician consultation same day
+- FRAUD: Advanced imaging (MRI, CT scan) billed by general physician without referral or specialist indication
+- FRAUD: Specialist-only procedures billed as general physician service
+
+================================================================================
+NOTE FOR GRAPH RAG:
+This section defines the "General Physician" root node in the knowledge graph.
+ALL 35 specialties inherit these permissions via the "inherits" relationship.
+When a specialist orders any service listed above, it should NOT be flagged
+as fraud solely on the basis of specialty mismatch — general medical practice
+rights apply to all licensed physicians.
+================================================================================
+================================================================================
+END OF POLICIES KNOWLEDGE BASE
+================================================================================
