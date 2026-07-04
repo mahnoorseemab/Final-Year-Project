@@ -30,6 +30,7 @@ The system analyzes each claim and flags fraudulent behavior — whether committ
 - 🧪 Dual GAN models (**DCTGAN** and **TTSGAN**) for synthetic transaction and time-series data generation
 - 🖥️ **React** frontend with role-based navigation (Admin, Staff, Doctor, Patient)
 - ⚡ **FastAPI** backend serving REST endpoints consumed by the frontend
+- 👨‍⚕️ AI-powered **Doctor Recommendation** — suggests the top 5 best-matched doctors to patients based on speciality and diagnosis
 
 ---
 
@@ -40,7 +41,7 @@ The system analyzes each claim and flags fraudulent behavior — whether committ
 | **Admin** | Full system oversight and management |
 | **Staff** | Review and process claims/reports |
 | **Doctor** | Submit/view claims relevant to their patients |
-| **Patient** | View their own claims and reports |
+| **Patient** | View their own claims/reports and get AI-recommended doctors by speciality |
 
 ---
 
@@ -129,6 +130,15 @@ Detailed, LLM-generated explanation (powered by LLaMA 3.3 70B) covering the verd
 Final recommendation (Approve/Reject/Investigate) with a disclaimer noting that a qualified human reviewer must verify the report before final action.
 
 ![Fraud Report Recommendation](screenshots/14-fraud-report-recommendation.png)
+
+### 15–17. Doctor Recommendation (Patient-only feature)
+This feature is accessible only to users logged in with the **Patient** role. A patient enters a speciality and their service/diagnosis need, and the system's AI recommends the **top 5 best-matched doctors** — ranked by AI score, with fees, ratings, and nearby hospital locations shown on an interactive map.
+
+![Recommendation Search](screenshots/15-recommendation-search.png)
+
+![Recommendation Ranked Doctors](screenshots/16-recommendation-ranked-doctors.png)
+
+![Recommendation More Doctors & Map](screenshots/17-recommendation-more-doctors-map.png)
 
 ---
 
