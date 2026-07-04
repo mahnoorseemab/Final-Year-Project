@@ -38,9 +38,9 @@ The system analyzes each claim and flags fraudulent behavior — whether committ
 | Role | Access |
 |---|---|
 | **Admin** | Full system oversight and management |
-| **Staff** | Review and process claims/reports |
-| **Doctor** | Submit/view claims relevant to their patients |
-| **Patient** | View their own claims and reports |
+| **Staff** | Submit, Review and process claims/reports |
+| **Doctor** |Full system oversight|
+| **Patient** |View Recommendation page|
 
 ---
 
