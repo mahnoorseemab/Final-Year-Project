@@ -1,4 +1,4 @@
-# 🛡️ MediGuard AI — Agentic AI-Based Fraud Detection & Recommendation System
+# 🛡️ MediGuard AI — Agentic AI-Based HealthCare Fraud Detection & Recommendation System
 
 MediGuard AI is a multi-agent, AI-powered system for detecting fraudulent activity within the healthcare ecosystem — flagging suspicious behavior by doctors, patients, or any other party involved in a claim. It combines graph-based knowledge retrieval, large language model reasoning, and generative adversarial networks to analyze claims and generate structured, explainable fraud reports.
 
