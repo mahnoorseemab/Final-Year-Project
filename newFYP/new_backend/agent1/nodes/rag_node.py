@@ -63,7 +63,6 @@
 #   1. python rag/kb_loader.py       → builds rag/faiss_index/
 #   2. python rag/neo4j_builder.py   → builds Neo4j knowledge graph
 #   3. Neo4j Desktop must be running at bolt://127.0.0.1:7687
-#      with username=neo4j, password=MSA93640
 #
 # FALLBACK:
 #   If FAISS index missing OR Groq API fails → template report.

@@ -14,11 +14,13 @@
 
 import os
 from neo4j import GraphDatabase
+from dotenv import load_dotenv
+load_dotenv()
 
 # ── Neo4j Credentials ────────────────────────────────────────
 NEO4J_URI      = "bolt://127.0.0.1:7687"
 NEO4J_USERNAME = "neo4j"
-NEO4J_PASSWORD = "MSA93640"
+NEO4J_PASSWORD = os.getenv("NEO4J_PASSWORD")
 
 # ── Specialty Mapping ────────────────────────────────────────
 SPECIALTY_MAPPING = {

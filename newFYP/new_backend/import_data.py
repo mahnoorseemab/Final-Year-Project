@@ -1,11 +1,14 @@
 import pandas as pd
 from sqlalchemy import create_engine
+import os
+from dotenv import load_dotenv
+load_dotenv()
 
 # ─────────────────────────────────────────────
 # CHANGE THESE TO YOUR MYSQL DETAILS
 # ─────────────────────────────────────────────
 MYSQL_USER     = "root"
-MYSQL_PASSWORD = "1234"   # ← change this!
+MYSQL_PASSWORD = os.getenv("MYSQL_PASSWORD")
 MYSQL_HOST     = "localhost"
 MYSQL_PORT     = "3306"
 MYSQL_DATABASE = "fraud_detection"

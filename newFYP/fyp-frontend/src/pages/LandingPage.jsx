@@ -161,8 +161,8 @@ const LandingPage = () => {
         <div className="contact-grid">
           {[
             { icon: "📧", title: "Email", text: "mediguard15@gmail.com", delay: 0.1 },
-            { icon: "🏥", title: "Institution", text: "Final Year Project — Healthcare Fraud Detection", delay: 0.2 },
-            { icon: "🔗", title: "GitHub", text: "github.com/mahnoorseemab", delay: 0.3 },
+            { icon: "🏥", title: "Institution", text: "AgenticAI-Based Healthcre Fraud Detection & Recommendation System", delay: 0.2 },
+            { icon: "🔗", title: "GitHub", text: "View on GitHub", link: "https://github.com/mahnoorseemab/Final-Year-Project", delay: 0.3 },
           ].map((item, i) => (
             <motion.div
               key={i}
@@ -172,12 +172,23 @@ const LandingPage = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: item.delay }}
             >
-              <div className="contact-icon">{item.icon}</div>
-              <h4>{item.title}</h4>
-              <p>{item.text}</p>
+              {item.link ? (
+                <a href={item.link} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "inherit" }}>
+                  <div className="contact-icon">{item.icon}</div>
+                  <h4>{item.title}</h4>
+                  <p>{item.text}</p>
+                </a>
+              ) : (
+                <>
+                  <div className="contact-icon">{item.icon}</div>
+                  <h4>{item.title}</h4>
+                  <p>{item.text}</p>
+                </>
+              )}
             </motion.div>
           ))}
         </div>
+
 
         <motion.div className="land-footer" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
           <p>© 2026 MediGuard AI. All Rights Reserved. | Healthcare Fraud Detection System</p>
