@@ -59,7 +59,7 @@ Shows the step-by-step flow: transaction sequence generation → model processin
 
 ---
 
-## 🖼️ Screenshots — Application Flow
+## 🖼️ Application Flow
 
 ### 1. Landing Page
 Introduces MediGuard AI to hospital management with a quick overview of what the system does.
